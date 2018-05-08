@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<timeline>
+    <conditions>
+        <condition name="Compositores" value="true">
+            <condition name="CompositoresBarroco" value="true"/>
+            <condition name="CompositoresClassicismo" value="true"/>
+            <condition name="CompositoresRomantismo" value="true"/>
+            <condition name="CompositoresXX" value="true"/>
+            <condition name="CompositoresIdadeMédia" value="true">
+                <condition name="Ars Nova" value="true"/>
+                <condition name="Trovadores" value="true"/>
+            </condition>
+            <condition name="CompositoresRenascença" value="true"/>
+            <condition name="CompositoresJazz" value="true"/>
+        </condition>
+        <condition name="Cientistas" value="true">
+            <condition name="Matemáticos" value="true"/>
+            <condition name="Físicos" value="true"/>
+            <condition name="Químicos" value="true"/>
+            <condition name="Biólogos" value="true"/>
+        </condition>
+        <condition name="Filósofos" value="true"/>
+        <condition name="Cinema" value="true"/>
+        <condition name="Escritores" value="true"/>
+        <condition name="Escultores" value="true"/>
+        <condition name="Obras" value="true">
+            <condition name="ObrasMúsica" value="true"/>
+        </condition>
+        <condition name="Pintores" value="true"/>
+        <condition name="Líderes" value="true"/>
+        <condition name="Eventos" value="true">
+            <condition name="EventosMúsica" value="true"/>
+        </condition>
+        <condition name="Invenções" value="true">
+            <condition name="InvençõesInstrumentosMusicais" value="true"/>
+        </condition>
+        <condition name="Inventores" value="true"/>
+    </conditions>
+    <event name="Stephen Hawking">
+        <date start="1942" end="2018" ongoing="false"/>
+        <height>-1561</height>
+        <description></description>
+        <color red="0.3" green="0.5" blue="0.1"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Thomas Bayes">
+        <date start="1702" end="1761" ongoing="false"/>
+        <height>-1405</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Thomas Hobbes">
+        <date start="1588" end="1679" ongoing="false"/>
+        <height>1253</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Ralph Vaughan Williams">
+        <date start="1872" end="1958" ongoing="false"/>
+        <height>-175</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="John Adams">
+        <date start="1947" end="2018" ongoing="true"/>
+        <height>300</height>
+        <description>(O Compositor, não o presidente americano)</description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Nikolai Rimsky-Korsakov">
+        <date start="1844" end="1908" ongoing="false"/>
+        <height>-15</height>
+        <description></description>
+        <color red="0.0" green="0.39215687" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Francesca Caccini">
+        <date start="1587" end="1641" ongoing="false"/>
+        <height>-92</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johannes Ockeghem">
+        <date start="1420" end="1497" ongoing="false"/>
+        <height>40</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Paul Dukas">
+        <date start="1865" end="1935" ongoing="false"/>
+        <height>308</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Schoenberg's String Quartet No.2, Op.10">
+        <date start="1907" end="1908" ongoing="false"/>
+        <height>198</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Wolfgang Amadeus Mozart">
+        <date start="1756" end="1791" ongoing="false"/>
+        <height>-105</height>
+        <description></description>
+        <color red="0.6" green="0.2" blue="0.0"/>
+        <links>
+            <link type="AUDIO" name="Sonata para piano n11 em Lá Maior K331 I Mov">https://www.youtube.com/watch?v=FZ1mj9IaczQ</link>
+            <link type="AUDIO" name="Sinfonia n40 em Sol menor K550">https://youtu.be/JTc1mDieQI8</link>
+            <link type="AUDIO" name="Requiem em Ré menor">https://www.youtube.com/watch?v=sPlhKP0nZII</link>
+        </links>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresClassicismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Magnus Liber">
+        <date start="1150" end="1230" ongoing="false"/>
+        <height>-270</height>
+        <description></description>
+        <color red="0.0" green="0.6" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Immanuel Kant">
+        <date start="1724" end="1804" ongoing="false"/>
+        <height>1375</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Construção da Torre Eiffel">
+        <date start="1889" end="1889" ongoing="false"/>
+        <height>760</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Karlheinz Stockhausen">
+        <date start="1928" end="2007" ongoing="false"/>
+        <height>-733</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Pierre de Fermat">
+        <date start="1601" end="1665" ongoing="false"/>
+        <height>-1585</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Michelangelo">
+        <date start="1475" end="1564" ongoing="false"/>
+        <height>-1110</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="György Ligeti">
+        <date start="1923" end="2006" ongoing="false"/>
+        <height>-787</height>
+        <description></description>
+        <color red="0.2509804" green="0.2509804" blue="0.2509804"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="René Magritte">
+        <date start="1898" end="1967" ongoing="false"/>
+        <height>-1092</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Henri Dutilleux">
+        <date start="1916" end="2013" ongoing="false"/>
+        <height>-395</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="René Descartes">
+        <date start="1596" end="1650" ongoing="false"/>
+        <height>-1435</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Filósofos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Inicio da Construção do Stonehenge">
+        <date start="-3100" end="0" ongoing="false"/>
+        <height>-110</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="George Paget Thomson">
+        <date start="1892" end="1975" ongoing="false"/>
+        <height>-1690</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="John Cage">
+        <date start="1912" end="1992" ongoing="false"/>
+        <height>-888</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Pitágoras">
+        <date start="-570" end="-495" ongoing="false"/>
+        <height>-300</height>
+        <description></description>
+        <color red="0.0" green="0.39215687" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Filósofos</SINGLE>
+                <SINGLE>Cientistas</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Joseph John Thompson">
+        <date start="1856" end="1940" ongoing="false"/>
+        <height>-1625</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Libertas Ecclesiae">
+        <date start="1079" end="1079" ongoing="false"/>
+        <height>-185</height>
+        <description></description>
+        <color red="0.5019608" green="0.0" blue="0.5019608"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Ad Organum Faciendum">
+        <date start="1100" end="1100" ongoing="false"/>
+        <height>-145</height>
+        <description></description>
+        <color red="0.0" green="0.39215687" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Segunda Guerra Mundial">
+        <date start="1939" end="1945" ongoing="false"/>
+        <height>-846</height>
+        <description></description>
+        <color red="0.2" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Martinho Lutero">
+        <date start="1483" end="1546" ongoing="false"/>
+        <height>-160</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Líderes</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Antoine-Laurent Lavoisier">
+        <date start="1743" end="1794" ongoing="false"/>
+        <height>-1480</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Químicos</SINGLE>
+                    <SINGLE>Biólogos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Sergei Rachmaninoff">
+        <date start="1873" end="1943" ongoing="false"/>
+        <height>-759</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Anton Webern">
+        <date start="1883" end="1945" ongoing="false"/>
+        <height>125</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Bernard De Ventadour">
+        <date start="1130" end="1200" ongoing="false"/>
+        <height>-100</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links>
+            <link type="AUDIO" name="Can vei la lauzeta mover">https://youtu.be/I9gzaauL67s</link>
+        </links>
+        <showCondition>
+            <AND>
+                <SINGLE>Trovadores</SINGLE>
+                <AND>
+                    <SINGLE>Compositores</SINGLE>
+                    <SINGLE>CompositoresIdadeMédia</SINGLE>
+                </AND>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johann Wolfgang von Goethe">
+        <date start="1749" end="1832" ongoing="false"/>
+        <height>-782</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Gustav Mahler">
+        <date start="1860" end="1911" ongoing="false"/>
+        <height>-630</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Johannes Vermeer">
+        <date start="1632" end="1675" ongoing="false"/>
+        <height>-1100</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Gustav Holst">
+        <date start="1874" end="1934" ongoing="false"/>
+        <height>505</height>
+        <description></description>
+        <color red="0.5019608" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Sergey Prokofiev">
+        <date start="1891" end="1953" ongoing="false"/>
+        <height>345</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Rembrandt van Rijn">
+        <date start="1606" end="1669" ongoing="false"/>
+        <height>-1165</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Musica Enchiriadis">
+        <date start="850" end="950" ongoing="false"/>
+        <height>-200</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Obras</SINGLE>
+                <SINGLE>ObrasMúsica</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Primeira viagem de trem">
+        <date start="1804" end="1804" ongoing="false"/>
+        <height>602</height>
+        <description></description>
+        <color red="0.2509804" green="0.2509804" blue="0.2509804"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Eventos</SINGLE>
+                <SINGLE>Invenções</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Binchois">
+        <date start="1400" end="1460" ongoing="false"/>
+        <height>-275</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Richard Strauss">
+        <date start="1864" end="1949" ongoing="false"/>
+        <height>-597</height>
+        <description></description>
+        <color red="0.2" green="0.2" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="César Franck">
+        <date start="1822" end="1890" ongoing="false"/>
+        <height>418</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Edvard Grieg">
+        <date start="1843" end="1907" ongoing="false"/>
+        <height>-525</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Paul Erdös">
+        <date start="1913" end="1996" ongoing="false"/>
+        <height>-1362</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="LP (Long Play)">
+        <date start="1948" end="1948" ongoing="false"/>
+        <height>660</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Invenções</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Revolução Francesa">
+        <date start="1789" end="1799" ongoing="false"/>
+        <height>-886</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.36862746"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Claude Debussy">
+        <date start="1862" end="1918" ongoing="false"/>
+        <height>65</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Aleksandr Nikolayevich Skryabin">
+        <date start="1872" end="1915" ongoing="false"/>
+        <height>-231</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Aristóteles">
+        <date start="-384" end="-322" ongoing="false"/>
+        <height>-300</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Franz Schubert">
+        <date start="1797" end="1828" ongoing="false"/>
+        <height>30</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Georges Méliès">
+        <date start="1861" end="1938" ongoing="false"/>
+        <height>-1302</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cinema</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Darius Milhaud">
+        <date start="1892" end="1974" ongoing="false"/>
+        <height>270</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johannes Brahms">
+        <date start="1833" end="1897" ongoing="false"/>
+        <height>-570</height>
+        <description></description>
+        <color red="0.6" green="0.2" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Jan Van Eyck">
+        <date start="1395" end="1441" ongoing="false"/>
+        <height>-1227</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Carl Friedrich Abel">
+        <date start="1723" end="1787" ongoing="false"/>
+        <height>-210</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Bartolomeo Cristofori">
+        <date start="1655" end="1731" ongoing="false"/>
+        <height>-183</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Inventores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="George Boole">
+        <date start="1815" end="1864" ongoing="false"/>
+        <height>1405</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Filósofos</SINGLE>
+                <AND>
+                    <SINGLE>Cientistas</SINGLE>
+                    <SINGLE>Matemáticos</SINGLE>
+                </AND>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Queda De Roma">
+        <date start="476" end="476" ongoing="false"/>
+        <height>-200</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="George Gershwin">
+        <date start="1898" end="1937" ongoing="false"/>
+        <height>32</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Edsger Wybe Dijkstra">
+        <date start="1930" end="2002" ongoing="false"/>
+        <height>-1395</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cientistas</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Alfred Schnittke">
+        <date start="1934" end="1998" ongoing="false"/>
+        <height>-510</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Luciano Berio">
+        <date start="1925" end="2003" ongoing="false"/>
+        <height>214</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Niccolò Machiavelli">
+        <date start="1468" end="1527" ongoing="false"/>
+        <height>1325</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Joseph Fourier">
+        <date start="1786" end="1830" ongoing="false"/>
+        <height>-1609</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links>
+            <link type="VIDEO" name="Ptolemy and Homer">https://www.youtube.com/watch?v=QVuU2YCwHjw</link>
+            <link type="OTHER_OPEN_BROWSER" name="Seeing Circles, Sines and Signals">https://jackschaedler.github.io/circles-sines-signals/index.html</link>
+            <link type="VIDEO" name="The Dark Knight Rises...by Fourier Series">https://youtu.be/IhAiINH7pBU</link>
+        </links>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Isaac Newton">
+        <date start="1642" end="1727" ongoing="false"/>
+        <height>-1550</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Anton Bruckner">
+        <date start="1924" end="1996" ongoing="false"/>
+        <height>-315</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Count Basie">
+        <date start="1904" end="1984" ongoing="false"/>
+        <height>1110</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Léon Theremin">
+        <date start="1896" end="1993" ongoing="false"/>
+        <height>-1590</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cientistas</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Glenn Miller">
+        <date start="1904" end="1944" ongoing="false"/>
+        <height>950</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Henrique Oswald">
+        <date start="1852" end="1931" ongoing="false"/>
+        <height>540</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Edgar Allan Poe">
+        <date start="1809" end="1849" ongoing="false"/>
+        <height>-1652</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Antonín Dvo?ák">
+        <date start="1841" end="1904" ongoing="false"/>
+        <height>-455</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Carlos Magno">
+        <date start="747" end="814" ongoing="false"/>
+        <height>-220</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Líderes</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Divina Comédia">
+        <date start="1307" end="1307" ongoing="false"/>
+        <height>-250</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Mário de Andrade">
+        <date start="1893" end="1945" ongoing="false"/>
+        <height>-1807</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="A Escrava Isaura">
+        <date start="1875" end="1875" ongoing="false"/>
+        <height>733</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Gustav Holst">
+        <date start="1874" end="1934" ongoing="false"/>
+        <height>-695</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Gerolamo Cardano">
+        <date start="1501" end="1576" ongoing="false"/>
+        <height>-1420</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Igor Stravinsky">
+        <date start="1882" end="1971" ongoing="false"/>
+        <height>-75</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.36862746"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Revolução Russa">
+        <date start="1917" end="1917" ongoing="false"/>
+        <height>372</height>
+        <description></description>
+        <color red="0.8" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="John Ronald Reuel Tolkien">
+        <date start="1892" end="1973" ongoing="false"/>
+        <height>-1064</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="William Byrd">
+        <date start="1540" end="1623" ongoing="false"/>
+        <height>160</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Cisma do Oriente">
+        <date start="1054" end="1054" ongoing="false"/>
+        <height>-345</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Jean-Philippe Rameau">
+        <date start="1683" end="1764" ongoing="false"/>
+        <height>-410</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.2"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Alice no País das Maravlilhas">
+        <date start="1865" end="1865" ongoing="false"/>
+        <height>640</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Duke Ellington">
+        <date start="1899" end="1974" ongoing="false"/>
+        <height>990</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Jean-Baptiste Lully">
+        <date start="1632" end="1687" ongoing="false"/>
+        <height>136</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Paul Devaux">
+        <date start="1897" end="1994" ongoing="false"/>
+        <height>-1223</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Niccolò Paganini">
+        <date start="1782" end="1840" ongoing="false"/>
+        <height>88</height>
+        <description></description>
+        <color red="0.93333334" green="0.6745098" blue="0.2509804"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresClassicismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Josquin des Prez">
+        <date start="1450" end="1521" ongoing="false"/>
+        <height>-70</height>
+        <description></description>
+        <color red="0.0" green="0.4" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Ella Fitzgerald">
+        <date start="1917" end="1996" ongoing="false"/>
+        <height>1142</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Luigi Boccherini">
+        <date start="1743" end="1805" ongoing="false"/>
+        <height>-535</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresClassicismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Jules Henri Poincaré">
+        <date start="1854" end="1912" ongoing="false"/>
+        <height>-1537</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Físicos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Iannis Xenakis">
+        <date start="1922" end="2001" ongoing="false"/>
+        <height>-427</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Miles Davis">
+        <date start="1926" end="1991" ongoing="false"/>
+        <height>915</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Hector Berlioz">
+        <date start="1803" end="1869" ongoing="false"/>
+        <height>482</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="John Dunstable">
+        <date start="1380" end="1453" ongoing="false"/>
+        <height>-382</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <OR>
+                    <SINGLE>CompositoresRenascença</SINGLE>
+                    <SINGLE>CompositoresIdadeMédia</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Hieronymous Bosch">
+        <date start="1450" end="1516" ongoing="false"/>
+        <height>-1195</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Guillaume de Machaut">
+        <date start="1300" end="1377" ongoing="false"/>
+        <height>-80</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Raffaello Sanzio da Urbino">
+        <date start="1483" end="1520" ongoing="false"/>
+        <height>-1160</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Felix Mendelssohn">
+        <date start="1809" end="1847" ongoing="false"/>
+        <height>-145</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Napoleão Bonaparte">
+        <date start="1769" end="1821" ongoing="false"/>
+        <height>-856</height>
+        <description></description>
+        <color red="0.8" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Líderes</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Pierre Simon Laplace">
+        <date start="1749" end="1827" ongoing="false"/>
+        <height>-1437</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Físicos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Muzio Clementi">
+        <date start="1752" end="1832" ongoing="false"/>
+        <height>140</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresClassicismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Cabral chega ao Brasil">
+        <date start="1500" end="1500" ongoing="false"/>
+        <height>-320</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Amadeo Modigliani">
+        <date start="1884" end="1920" ongoing="false"/>
+        <height>-1162</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Machado De Assis">
+        <date start="1839" end="1908" ongoing="false"/>
+        <height>-1776</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Alan Kay">
+        <date start="1940" end="2018" ongoing="true"/>
+        <height>-1520</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cientistas</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Fryderyk Chopin">
+        <date start="1810" end="1849" ongoing="false"/>
+        <height>338</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Winchester Troper">
+        <date start="975" end="1025" ongoing="false"/>
+        <height>-225</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Guido d'Arezzo">
+        <date start="991" end="1050" ongoing="false"/>
+        <height>-290</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Dante Alighieri">
+        <date start="1265" end="1321" ongoing="false"/>
+        <height>-282</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Claude Monet">
+        <date start="1840" end="1926" ongoing="false"/>
+        <height>-1037</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Louis Armstrong">
+        <date start="1901" end="1971" ongoing="false"/>
+        <height>880</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Nietzsche">
+        <date start="1844" end="1900" ongoing="false"/>
+        <height>1433</height>
+        <description></description>
+        <color red="0.2" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Filósofos</SINGLE>
+                <SINGLE>Compositores</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Charlie Parker">
+        <date start="1920" end="1955" ongoing="false"/>
+        <height>1197</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Philippe de Vitry's Arns nova">
+        <date start="1322" end="1323" ongoing="false"/>
+        <height>-135</height>
+        <description></description>
+        <color red="0.0" green="0.5" blue="1.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Aaron Copland">
+        <date start="1900" end="1990" ongoing="false"/>
+        <height>-550</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Gramofone">
+        <date start="1877" end="1877" ongoing="false"/>
+        <height>829</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Invenções</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Franz Kafka">
+        <date start="1883" end="1924" ongoing="false"/>
+        <height>-1838</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Joseph Haydn">
+        <date start="1732" end="1809" ongoing="false"/>
+        <height>-43</height>
+        <description></description>
+        <color red="0.4" green="0.6" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresClassicismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="John Farmer">
+        <date start="1570" end="1600" ongoing="false"/>
+        <height>-135</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Leonard Bernstein">
+        <date start="1918" end="1990" ongoing="false"/>
+        <height>-148</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Charles Baudelaire">
+        <date start="1821" end="1867" ongoing="false"/>
+        <height>1228</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Camille Saint-Saëns">
+        <date start="1835" end="1921" ongoing="false"/>
+        <height>448</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Philippe De Vitry">
+        <date start="1291" end="1361" ongoing="false"/>
+        <height>-110</height>
+        <description></description>
+        <color red="0.0" green="0.5" blue="1.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Astor Piazzola">
+        <date start="1921" end="1992" ongoing="false"/>
+        <height>-460</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Blaise Pascal">
+        <date start="1623" end="1662" ongoing="false"/>
+        <height>-1500</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Erik Satie">
+        <date start="1866" end="1925" ongoing="false"/>
+        <height>-259</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Arcangelo Corelli">
+        <date start="1653" end="1713" ongoing="false"/>
+        <height>79</height>
+        <description></description>
+        <color red="0.3" green="0.5" blue="0.1"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Pyotr Ilyich Tchaikovsky">
+        <date start="1840" end="1893" ongoing="false"/>
+        <height>-660</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Werner Heisenberg">
+        <date start="1901" end="1976" ongoing="false"/>
+        <height>-1657</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Marin Mersenne">
+        <date start="1588" end="1648" ongoing="false"/>
+        <height>-1472</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Filósofos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johann Sebastian Bach">
+        <date start="1685" end="1750" ongoing="false"/>
+        <height>-136</height>
+        <description></description>
+        <color red="0.0" green="0.39215687" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Point de vue du Gras">
+        <date start="1826" end="1826" ongoing="false"/>
+        <height>673</height>
+        <description>primeira fotografia</description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Eventos</SINGLE>
+                <SINGLE>Invenções</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Bertrand Russell">
+        <date start="1872" end="1970" ongoing="false"/>
+        <height>1343</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Peste Negra">
+        <date start="1346" end="1353" ongoing="false"/>
+        <height>-345</height>
+        <description></description>
+        <color red="0.2" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Georges Bizet">
+        <date start="1838" end="1875" ongoing="false"/>
+        <height>-415</height>
+        <description></description>
+        <color red="0.4" green="0.2" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="François Couperin">
+        <date start="1668" end="1773" ongoing="false"/>
+        <height>-355</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Dmitry Shostakovich">
+        <date start="1906" end="1975" ongoing="false"/>
+        <height>400</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Adam De La Halle">
+        <date start="1247" end="1288" ongoing="false"/>
+        <height>-185</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>Trovadores</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Giovanni Pierluigi da Palestrina">
+        <date start="1525" end="1594" ongoing="false"/>
+        <height>-30</height>
+        <description></description>
+        <color red="0.3" green="0.5" blue="0.1"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Alban Berg">
+        <date start="1885" end="1935" ongoing="false"/>
+        <height>158</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresXX</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Auguste Rodin">
+        <date start="1840" end="1917" ongoing="false"/>
+        <height>-997</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escultores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Pierre Boulez">
+        <date start="1925" end="2016" ongoing="false"/>
+        <height>-365</height>
+        <description></description>
+        <color red="0.1254902" green="0.1254902" blue="0.1254902"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="William Shakespeare">
+        <date start="1564" end="1616" ongoing="false"/>
+        <height>-262</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Carl Friedrich Gauss">
+        <date start="1777" end="1855" ongoing="false"/>
+        <height>-1370</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Peter Paul Rubens">
+        <date start="1577" end="1640" ongoing="false"/>
+        <height>-1230</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Johann Strauss II">
+        <date start="1825" end="1899" ongoing="false"/>
+        <height>-205</height>
+        <description></description>
+        <color red="0.8" green="0.4" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Simon Newcomb">
+        <date start="1835" end="1909" ongoing="false"/>
+        <height>-1465</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Físicos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Leonardo Da Vinci">
+        <date start="1452" end="1519" ongoing="false"/>
+        <height>-1310</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Pintores</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Invenção do Saxofone">
+        <date start="1840" end="1840" ongoing="false"/>
+        <height>-917</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Invenções</SINGLE>
+                <SINGLE>InvençõesInstrumentosMusicais</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Jules Verne">
+        <date start="1828" end="1905" ongoing="false"/>
+        <height>-1722</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Ludwig Wittgenstein">
+        <date start="1889" end="1951" ongoing="false"/>
+        <height>1305</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Béla Viktor János Bartók">
+        <date start="1881" end="1945" ongoing="false"/>
+        <height>-117</height>
+        <description></description>
+        <color red="0.5019608" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Primeiros registros de Castratis">
+        <date start="1490" end="1514" ongoing="false"/>
+        <height>79</height>
+        <description>Ver "Os castrati: reflexões sobre o início de uma prática vocal" de Kristina Augustin.</description>
+        <color red="0.3" green="0.5" blue="0.1"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Eventos</SINGLE>
+                <SINGLE>EventosMúsica</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Nascimento de Sherlock Holmes">
+        <date start="1854" end="1854" ongoing="false"/>
+        <height>705</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Franz Liszt">
+        <date start="1811" end="1886" ongoing="false"/>
+        <height>283</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Arthur Schopenhauer">
+        <date start="1788" end="1860" ongoing="false"/>
+        <height>1330</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Liszt's Bagatelle Sans Tonalité">
+        <date start="1885" end="1885" ongoing="false"/>
+        <height>242</height>
+        <description></description>
+        <color red="0.5019608" green="0.0" blue="0.5019608"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Domenico Scarlatti">
+        <date start="1685" end="1757" ongoing="false"/>
+        <height>53</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <OR>
+                    <SINGLE>CompositoresBarroco</SINGLE>
+                    <SINGLE>CompositoresClassicismo</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johannes Kepler">
+        <date start="1571" end="1630" ongoing="false"/>
+        <height>-1385</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Matemáticos</SINGLE>
+                    <SINGLE>Físicos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Kurt Gödel">
+        <date start="1906" end="1978" ongoing="false"/>
+        <height>-1490</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cientistas</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Claudio Monteverdi">
+        <date start="1567" end="1643" ongoing="false"/>
+        <height>-60</height>
+        <description></description>
+        <color red="1.0" green="0.0" blue="0.2"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Papado de Gregório Magno">
+        <date start="590" end="604" ongoing="false"/>
+        <height>-230</height>
+        <description></description>
+        <color red="0.2509804" green="0.2509804" blue="0.2509804"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Líderes</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Perotín">
+        <date start="1170" end="1236" ongoing="false"/>
+        <height>-240</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresIdadeMédia</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Platão">
+        <date start="-428" end="-348" ongoing="false"/>
+        <height>-400</height>
+        <description></description>
+        <color red="0.5019608" green="0.5019608" blue="0.5019608"/>
+        <links/>
+        <showCondition>
+            <OR>
+                <SINGLE>Filósofos</SINGLE>
+                <SINGLE>Cientistas</SINGLE>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Orlando di Lasso">
+        <date start="1532" end="1594" ongoing="false"/>
+        <height>53</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Carta Magna">
+        <date start="1215" end="1215" ongoing="false"/>
+        <height>-315</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Carlo Gesualdo">
+        <date start="1566" end="1613" ongoing="false"/>
+        <height>-420</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Samuel Barber">
+        <date start="1910" end="1981" ongoing="false"/>
+        <height>-285</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="&quot;Experimentos em Hibridização De Plantas&quot;, de Mendel">
+        <date start="1865" end="1865" ongoing="false"/>
+        <height>797</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Albert Einstein">
+        <date start="1879" end="1955" ongoing="false"/>
+        <height>-1432</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Cientistas</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Leonin">
+        <date start="1159" end="1201" ongoing="false"/>
+        <height>-215</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresIdadeMédia</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Modest Petrovich Mussorgsky">
+        <date start="1839" end="1881" ongoing="false"/>
+        <height>-332</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Ludwig van Beethoven">
+        <date start="1770" end="1827" ongoing="false"/>
+        <height>-75</height>
+        <description></description>
+        <color red="0.8" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <OR>
+                    <SINGLE>CompositoresRomantismo</SINGLE>
+                    <SINGLE>CompositoresClassicismo</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Guerras Napoleônicas">
+        <date start="1803" end="1815" ongoing="false"/>
+        <height>-829</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Lei Áurea">
+        <date start="1888" end="1888" ongoing="false"/>
+        <height>614</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Antonio Vivaldi">
+        <date start="1678" end="1741" ongoing="false"/>
+        <height>-315</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Johann Pachelbel">
+        <date start="1653" end="1706" ongoing="false"/>
+        <height>-480</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Arnold Schoenberg">
+        <date start="1874" end="1951" ongoing="false"/>
+        <height>95</height>
+        <description></description>
+        <color red="0.1254902" green="0.1254902" blue="0.1254902"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Edward Hopper">
+        <date start="1882" end="1967" ongoing="false"/>
+        <height>-1253</height>
+        <description></description>
+        <color red="0.2" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="95 teses de Martinho Lutero">
+        <date start="1517" end="1517" ongoing="false"/>
+        <height>-192</height>
+        <description></description>
+        <color red="0.0" green="0.2" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Tom Riddle">
+        <date start="1905" end="1943" ongoing="false"/>
+        <height>1580</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>HarryPotter</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Dizzy Gillespie">
+        <date start="1917" end="1993" ongoing="false"/>
+        <height>1070</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Cannonball Adderley">
+        <date start="1928" end="1975" ongoing="false"/>
+        <height>1030</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresJazz</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Guillaume De Dufay">
+        <date start="1397" end="1474" ongoing="false"/>
+        <height>-112</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRenascença</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Leonhard Euler">
+        <date start="1707" end="1783" ongoing="false"/>
+        <height>-1520</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Matemáticos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Epitáfio de Seikilos">
+        <date start="-128" end="-127" ongoing="false"/>
+        <height>-400</height>
+        <description></description>
+        <color red="0.0" green="0.39215687" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Obras</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Giovanni Gabrieli">
+        <date start="1554" end="1612" ongoing="false"/>
+        <height>102</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <OR>
+                    <SINGLE>CompositoresRenascença</SINGLE>
+                    <SINGLE>CompositoresBarroco</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Richard Wagner">
+        <date start="1813" end="1886" ongoing="false"/>
+        <height>-728</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Santo Agostinho">
+        <date start="354" end="430" ongoing="false"/>
+        <height>-250</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Michael Faraday">
+        <date start="1791" end="1867" ongoing="false"/>
+        <height>-1572</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <OR>
+                    <SINGLE>Físicos</SINGLE>
+                    <SINGLE>Químicos</SINGLE>
+                </OR>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Edmond Halley">
+        <date start="1656" end="1742" ongoing="false"/>
+        <height>-1630</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Cientistas</SINGLE>
+                <SINGLE>Físicos</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Antoine Joseph Sax">
+        <date start="1814" end="1894" ongoing="false"/>
+        <height>-951</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Inventores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Carl Philipp Emanuel Bach">
+        <date start="1714" end="1788" ongoing="false"/>
+        <height>113</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="George Frideric Handel">
+        <date start="1685" end="1759" ongoing="false"/>
+        <height>-246</height>
+        <description></description>
+        <color red="0.0" green="0.4" blue="0.6"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Henry Purcell">
+        <date start="1659" end="1695" ongoing="false"/>
+        <height>25</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresBarroco</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Boethius">
+        <date start="480" end="525" ongoing="false"/>
+        <height>-290</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Robert Schumann">
+        <date start="1810" end="1856" ongoing="false"/>
+        <height>-492</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <AND>
+                <SINGLE>Compositores</SINGLE>
+                <SINGLE>CompositoresRomantismo</SINGLE>
+            </AND>
+        </showCondition>
+    </event>
+    <event name="Max Ernst">
+        <date start="1891" end="1976" ongoing="false"/>
+        <height>-1192</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Primeira Guerra Mundial">
+        <date start="1914" end="1918" ongoing="false"/>
+        <height>-814</height>
+        <description></description>
+        <color red="0.5019608" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Eventos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Vincent Van Gogh">
+        <date start="1853" end="1890" ongoing="false"/>
+        <height>-1126</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Pintores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Lewis Carroll">
+        <date start="1832" end="1898" ongoing="false"/>
+        <height>-1745</height>
+        <description></description>
+        <color red="0.1" green="0.5" blue="0.3"/>
+        <links>
+            <link type="OTHER_OPEN_BROWSER" name="Lewis Carroll on wikipedia">https://en.wikipedia.org/wiki/Lewis_Carroll</link>
+        </links>
+        <showCondition>
+            <OR>
+                <SINGLE>Escritores</SINGLE>
+                <AND>
+                    <SINGLE>Cientistas</SINGLE>
+                    <SINGLE>Matemáticos</SINGLE>
+                </AND>
+            </OR>
+        </showCondition>
+    </event>
+    <event name="Maurice Ravel">
+        <date start="1875" end="1937" ongoing="false"/>
+        <height>-45</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.2"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Compositores</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Jean-Jacques Rousseau">
+        <date start="1712" end="1778" ongoing="false"/>
+        <height>1295</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Filósofos</SINGLE>
+        </showCondition>
+    </event>
+    <event name="Luís Vaz de Camões">
+        <date start="1524" end="1580" ongoing="false"/>
+        <height>-359</height>
+        <description></description>
+        <color red="0.0" green="0.0" blue="0.0"/>
+        <links/>
+        <showCondition>
+            <SINGLE>Escritores</SINGLE>
+        </showCondition>
+    </event>
+</timeline>
