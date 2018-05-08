@@ -1,11 +1,20 @@
 # TimelineFX ![](https://github.com/HenriAugusto/TimelineFX/blob/master/Icons/TimelineFX%20Icon.png)
-This the Main repository for the TimelineFX application.
 
-[**Click here to go to the download page!**](https://github.com/HenriAugusto/TimelineFX/releases/tag/v0.1.0)
+[**Click here to read this README file in English**](https://github.com/HenriAugusto/TimelineFX/blob/master/README-en.md)
 
-## What is it?
+Este é o repositório principal para o aplicativo TimelinFX
 
-TimelineFX is an desktop software application to create, edit and view timelines.
+[**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/TimelineFX/releases/tag/v0.1.0)
+
+## O que é isto?
+
+TimelinFX é um aplicativo para criar, editar e visualizar linhas do tempo (timelines).
+
+## Por quê?
+
+Tudo começou como um projeto pessoal para me ajudar em meus estudos de história (principalmente história da arte). Então, como professor, percebi que era uma ferramenta muito útil nas aulas de música porque a maioria dos estudantes tinha uma compreensão básica da sequência dos eventos mas não tinha um bom entendimento de sua _"posição no tempo"_. Por exemplo: em aulas sobre história da música da música ocidental nós usamos muito tempo falando de Bach em diante. Os estudantes não observam que "Idade Média" é na verdade um período de ~1000 anos (Assim chamado pelas pessoas da Renascença). Então eu decidi criar este projeto para ajudar os estudantes a entender a escala temporal das coisas.
+
+É importante notar que **a linha do tempo não é um objeto de estudo _per se_** e sim uma **ferramenta** para auxiliar estudantes nos seus estudos de história. Ela os ajuda a entender melhor _"posições no tempo"_ e os permite agrupar eventos visualmente a fim de estudar sua _posição relativa_
 
 ## Screenshot
 ![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20screenshot.png)
@@ -13,14 +22,15 @@ TimelineFX is an desktop software application to create, edit and view timelines
 ## Gif
 ![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20gif.gif)
 
-## Features
+## Funcionalidades
 
-* **Searchable events:** press Ctrl+F and find the event you're looking for and the app will center the view on it.
-* **Integrated web-browser:** Save links to an event and view them inside the application. You can even specify the type of the link and, for example, if it's an audio it will play in the background.
-* **Conditional view**: You can add named conditions (like "Composers", "Painters", etc) and select at any time which events you want to see. This is powered by conditional expressions syntax parsing so you can for example add an event for Beethoven and use the condition expression: __Composers && (ComposersClassical || ComposersRomantic)__
-* **Embedded help:** press F1 at any time for a window which contains all the information you need. No need to open external PDF's.
-* **XML Saves:** all the save data is stored in UTF-8 XML files that can be parsed by other apps for all kinds of statistics (plus it's human readable).
+* **Busca de eventos:** aperte Ctrl+F e encontre o evento que procura e o aplicativo vai centralizar a visualização nele
+* **Navegador web embutido**: Salve links em um evento e os acesse de dentro do próprio aplicativo. Você pode até especificar o tipo de link e, por exemplo, se for um link de áudio ele vai tocar no _background_.
+* **Visualização Condicional:** Você pode adicionar condições (como "Compositores", "Pintores", etc) e selecionar a qualquer hora que eventos você quer ver. Isto é apoiado por uma sintaxe de expressões condicionais. Você pode, por exemplo, adicionar um evento para Beethoven e usar a expressão: __Compositores && (CompositoresClassico || CompositoresRomantico)__
+* **Ajuda embutida:** Pressione F1 a qualquer momento para abrir uma janela que contém toda a informação que precisa. Não há necessidade de abrir PDF's ou arquivos externos.
+* **Dados salvos com XML:** Toda a informação salva é armazenada em arquivos XML codificados em UTF-8 que podem ser lidas por outros aplicativos para estatísticas (e ainda é legível por humanos)
+* **Timeline da história da arte:** O software ja vem com a linha do tempo da história da arte que originou o software. Não está nem perto de estar finalizada (se é que um dia estará) mas é um bom começo ;)
 
-## Future
+## Futuro
 
-- [ ] **3D Visualization:** 3D view of the timeline. __Easter egg!__ Actually you can peek an prototype pressing ctrl+3 after loading your timeline. Click and drag to move the view. F10 and F11 to zoom (use ctrl to change the size of the zoom steps)
+- [ ] **Visualização 3D:** Visualizar em 3D a linha do tempo. __Easter egg!__ Na verdade você ja pode ver um protótipo dessa função apertando ctrl+3 depois de carregar tua linha do tempo. Clique e arraste para mover a visualização. UseF10 and F11 para zoom (use ctrl para controlar a variação de zoom)
