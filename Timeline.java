@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,14 +11,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 /**
- *
+ * This is the class responsible for holding the information of a Timeline. It holds {@link Event} and {@link Condition} objects 
+ * along with a {@link GraphicView} object responsible for managing the mathematics of the drawing on the timeline's related
+ * {@link Canvas} object.
+ * <p>It also holds basic settings and is responsible for managing a set of the events that are currently selected.</p>
  * @author Henri Augusto
  */
 public class Timeline {
@@ -29,12 +31,14 @@ public class Timeline {
     Set<Event> events = new HashSet<>();
     //Set<Event> selectedEvents = new HashSet<>();
     ObservableSet<Event> selectedEvents = FXCollections.observableSet( new HashSet() );
-    int minYear = -2000;
+    int minYear = -3500;
     int maxYear = 2018;
-    int height = 3000;
-    int defaultCanvasWidth = maxYear-minYear;
-    int defaultCanvasHeight = height;
+    int height = 4000;
+    String name = "";
+    //int defaultCanvasWidth = maxYear-minYear;
+    //int defaultCanvasHeight = height;
     GraphicView gview;
+    /**  This is where the condition objects related to this timeline are stored. See also: {@link ConditionHandler} */
     List<Condition> conditions;
     //Set<>
     
@@ -82,36 +86,41 @@ public class Timeline {
         Export.saveXML(this);
     }
     
+    /**
+     * See {@link GeoGebraImport} for more information
+     * @see GeoGebraImport
+     * @deprecated
+     */
     @Deprecated
     void loadFromGeogebraXML(){
         GeoGebraImport.loadFromGeogebraXML(this);
     }
 
+    /**
+     * Tells the {@link Import} that this timeline want to load a timeline.
+     */
     void loadFromFile() {        
         Import.loadFromFile(this);
     }
     
+    /**
+     * clears the {@link Timeline#events} and {@link Timeline#selectedEvents} collections
+     */
     void clear(){
         events.clear();
         selectedEvents.clear();
     }
 
-    void moveSelectedDown(double amt){
-        for (Event se : TimelineFXApp.app.timeline.selectedEvents) {
-            se.height += amt;
-        }
-    }
-
-    void checkConditions() {
+     void checkConditions() {
         for (Event event : events) {
             event.checkCondition();
         }
     }
     
     void updateEventsIsOnView() {
-        System.out.println("timelinefx.Timeline.updateEventsIsOnView()");
+        //System.out.println("timelinefx.Timeline.updateEventsIsOnView()");
         for (Event event : events) {
-            event.isOnView();
+            event.updateIsOnView();
         }
     }
 

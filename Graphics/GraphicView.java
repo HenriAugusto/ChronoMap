@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -52,7 +52,7 @@ public class GraphicView {
         //convert the original to the transformed coordinatess
         //viewX = (int)( (-p.getX()) + 0.5f*cnv.getWidth()/zoom );
         //viewY = (int)( (-p.getY()) + 0.5f*cnv.getHeight()/zoom );
-        Canvas cnv = TimelineFXApp.app.cnv;
+        Canvas cnv = ChronoMapApp.app.cnv;
         //Point2D testPoint = transformPoint(p);
         //testPoint = p;
         //THOSE COORDINATES DO NOT COUNT ZOOM???
@@ -127,8 +127,8 @@ public class GraphicView {
         removeScrollBarListeners();
             //scrollBarH.setValue(MathUtils.map(p.getX(), 0, cnv.getWidth(), 0, 100));
             //scrollBarV.setValue(MathUtils.map(p.getY(), 0, cnv.getHeight(), 0, 100));
-            scrollBarH.setValue(MathUtils.map(p.getX(), TimelineFXApp.app.timeline.minYear, TimelineFXApp.app.timeline.maxYear, 0, scrollBarH.getMax()));
-            scrollBarV.setValue(MathUtils.map(p.getY(), -TimelineFXApp.app.timeline.height/2, TimelineFXApp.app.timeline.height/2, 0, scrollBarV.getMax()));
+            scrollBarH.setValue(MathUtils.map(p.getX(), ChronoMapApp.app.timeline.minYear, ChronoMapApp.app.timeline.maxYear, 0, scrollBarH.getMax()));
+            scrollBarV.setValue(MathUtils.map(p.getY(), -ChronoMapApp.app.timeline.height/2, ChronoMapApp.app.timeline.height/2, 0, scrollBarV.getMax()));
         addScrollBarListeners();
         //scrollBarH.valueProperty().
         /* SHOULD WORK
@@ -171,14 +171,14 @@ public class GraphicView {
         zoom = zoom <= 0 ? minZoom : zoom;
         //bad design
         centerOnPoint(lastCenteredPoint);    
-        TimelineFXApp.app.timeline.updateEventsIsOnView();
+        ChronoMapApp.app.timeline.updateEventsIsOnView();
     }
     
     void setZoom(GraphicsContext gc, double newZoom){
         zoom = newZoom;
         zoom = zoom <= 0 ? minZoom : zoom;
         centerOnPoint(lastCenteredPoint);
-        TimelineFXApp.app.timeline.updateEventsIsOnView();
+        ChronoMapApp.app.timeline.updateEventsIsOnView();
     }
     
     void initScrollBarHandles(){
@@ -222,8 +222,8 @@ public class GraphicView {
         double y = MathUtils.map(scrollBarV.getValue(), 0, scrollBarV.getMax(), minCenter.getY(), maxCenter.getY());
         double x = MathUtils.map(d, 0,scrollBarH.getMax(), minCenter.getX(), maxCenter.getX());
         centerOnPoint(x, y);
-        TimelineFXApp.app.timeline.updateEventsIsOnView();
-        TimelineFXApp.app.draw();
+        ChronoMapApp.app.timeline.updateEventsIsOnView();
+        ChronoMapApp.app.draw();
     }
     
     /**
@@ -234,8 +234,8 @@ public class GraphicView {
         double x = MathUtils.map(scrollBarH.getValue(), 0, scrollBarH.getMax(), minCenter.getX(), maxCenter.getX());
         double y = MathUtils.map(d, 0, scrollBarV.getMax(), minCenter.getY(), maxCenter.getY());
         centerOnPoint(x, y);
-        TimelineFXApp.app.timeline.updateEventsIsOnView();
-        TimelineFXApp.app.draw();
+        ChronoMapApp.app.timeline.updateEventsIsOnView();
+        ChronoMapApp.app.draw();
     }
     
     protected void setScrollBars(ScrollBar scrollBarH, ScrollBar scrollBarV){
@@ -246,6 +246,14 @@ public class GraphicView {
         //setScrollBarsMaximumValues(gc);
         initScrollBarHandles();
         addScrollBarListeners();
+    }
+    
+    public void setMinCenter(float minX, float minY){
+        minCenter = new Point2D(minX, minY);
+    }
+    
+    public void setMaxCenter(float maxX, float maxY){
+        maxCenter = new Point2D(maxX, maxY);
     }
 
     public double getZoom() {

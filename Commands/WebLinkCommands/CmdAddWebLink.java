@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 /**
- *
+ * Command for adding a {@link WebLink} into an {@link Event}
  * @author Henri Augusto
  */
 public class CmdAddWebLink implements Command {

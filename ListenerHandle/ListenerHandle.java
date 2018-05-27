@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 /**
  * an interface for objects that will hold an ObservableValue and a Listener. It can attach and remove the listener from that property;

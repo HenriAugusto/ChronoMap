@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -12,11 +12,19 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * This is a recursive descent parser used to parse boolean expressions.
+ * This is a recursive descent parser used to parse boolean expressions (in Strings) <br>
+ * and convert then to {@link ConditionExpr} objects.
  * @author Henri Augusto
  */
 public class ConditionParser {
     
+    /**
+     * 
+     * @param s
+     * @return
+     * @throws timelinefx.ConditionParser.ParseException if the expression is invalid
+     * @throws RuntimeException if the expression is invalid
+     */
     static ConditionExpr parse(String s) throws ParseException, RuntimeException{
         //debug//Dbg.println("===========================INITIALIZING PARSING========================================================= ", Dbg.ANSI_BLUE);
         //return parse(s,0);

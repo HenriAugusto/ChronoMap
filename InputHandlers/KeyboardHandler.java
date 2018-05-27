@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,11 +18,11 @@ public class KeyboardHandler {
     
     static void keyPressed(KeyEvent e){
         String s = e.getCode().toString();
-        System.out.println("timelinefx.KeyboardHandler.keyPressed() = "+s);
+        System.out.println("ChronoMap.KeyboardHandler.keyPressed() = "+s);
         switch(s){
             case "DELETE":
                 CommandHandler.executeCommand( 
-                        new CmdDeleteEvents(TimelineFXApp.app.timeline, TimelineFXApp.app.timeline.selectedEvents)
+                        new CmdDeleteEvents(ChronoMapApp.app.timeline, ChronoMapApp.app.timeline.selectedEvents)
                 );
                 break;
             case "DIGIT3":
@@ -39,19 +39,19 @@ public class KeyboardHandler {
                 HelpStageManager.showWindow();
                 break;
             case "F10":
-                GraphicsContext gc = TimelineFXApp.app.cnv.getGraphicsContext2D();
+                GraphicsContext gc = ChronoMapApp.app.cnv.getGraphicsContext2D();
                 if (e.isControlDown()) {
-                    TimelineFXApp.app.timeline.gview.setZoom(gc, 1);
+                    ChronoMapApp.app.timeline.gview.setZoom(gc, 1);
                 } else {    
-                    TimelineFXApp.app.timeline.gview.addZoom(gc, 0.1);
+                    ChronoMapApp.app.timeline.gview.addZoom(gc, 0.1);
                 }
                 break;
             case "F11":
-                gc = TimelineFXApp.app.cnv.getGraphicsContext2D();
+                gc = ChronoMapApp.app.cnv.getGraphicsContext2D();
                 if (e.isControlDown()) {
-                    TimelineFXApp.app.timeline.gview.setZoom(gc, 2);
+                    ChronoMapApp.app.timeline.gview.setZoom(gc, 2);
                 } else {
-                    TimelineFXApp.app.timeline.gview.addZoom(gc, -0.1);
+                    ChronoMapApp.app.timeline.gview.addZoom(gc, -0.1);
                 }
                 break;
             case "F":
@@ -60,36 +60,39 @@ public class KeyboardHandler {
                 }
                 break;
             case "F5":
-                TimelineFXApp.app.browser.toggleVisible();
+                ChronoMapApp.app.browser.toggleVisible();
                 break;
             case "F6":
                 ConditionsWindowStageManager.showWindow();
                 break;
+            case "F8":
+                TimelineSettingsStageManager.showEventWindow();
+                break;
             case "F12":
                 double factor = !e.isControlDown() ? 1.1 : 1/1.1;
-                for (Event event : TimelineFXApp.app.timeline.events) {
+                for (Event event : ChronoMapApp.app.timeline.events) {
                     //event.height *= factor;
                 }
                 break;
             case "S":
                 if(e.isControlDown()){
                     System.out.println("timelinefx.KeyboardHandler.keyPressed()");
-                    TimelineFXApp.app.timeline.saveXML();
+                    ChronoMapApp.app.timeline.saveXML();
                 }
                 break;
             case "L":
                 if(e.isControlDown()){
                     System.out.println("timelinefx.KeyboardHandler.keyPressed()");
-                    TimelineFXApp.app.timeline.loadFromFile();
+                    ChronoMapApp.app.timeline.loadFromFile();
                 } else if( e.isShiftDown() ){
-                    if(TimelineFXApp.app.timeline.selectedEvents.size()==1)
-                        TimelineFXApp.app.timeline.selectedEvents.iterator().next().goToNextLink();
+                    if(ChronoMapApp.app.timeline.selectedEvents.size()==1)
+                        ChronoMapApp.app.timeline.selectedEvents.iterator().next().goToNextLink();
                 }
                 break;
             case "H":
                 if (e.isControlDown()) {
-                    TimelineFXApp.app.mainWindow.setFullScreen(
-                            !TimelineFXApp.app.mainWindow.isFullScreen()
+                    ChronoMapApp.app.mainWindow.setFullScreen(
+                            !ChronoMapApp.app.mainWindow.isFullScreen()
                     );
                 }
                 break;
@@ -98,14 +101,14 @@ public class KeyboardHandler {
                 if( e.isAltDown() ){    amt = 30;   }
                 if( e.isShiftDown() ){    amt = 1;   }
                 if( e.isControlDown() ){    amt = 5;   }
-                CommandHandler.executeCommand( new CmdMoveEvents(TimelineFXApp.app.timeline.selectedEvents, -amt));
+                CommandHandler.executeCommand( new CmdMoveEvents(ChronoMapApp.app.timeline.selectedEvents, -amt));
                 break;
             case "DOWN":
                 amt = 10;
                 if( e.isAltDown() ){    amt = 30;   }
                 if( e.isShiftDown() ){    amt = 1;   }
                 if( e.isControlDown() ){    amt = 5;   }
-                CommandHandler.executeCommand( new CmdMoveEvents(TimelineFXApp.app.timeline.selectedEvents, amt));
+                CommandHandler.executeCommand( new CmdMoveEvents(ChronoMapApp.app.timeline.selectedEvents, amt));
                 break;
             case "N":
                 if(e.isControlDown()){
@@ -126,7 +129,7 @@ public class KeyboardHandler {
                     EditEventStageManager.showEventWindow();
                 break;
         }
-        TimelineFXApp.app.draw();
+        ChronoMapApp.app.draw();
     }
     
     

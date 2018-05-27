@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,10 +11,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import static timelinefx.ConditionsWindowStageManager.mainAccordion;
 
 /**
- * Command to remove a Condition from the the conditions inside the main Timeline object (along with it's associated (key,value) pair into the conditionsMap.
+ * Command to remove a Condition from the the conditions inside the main Timeline object (along with it's
+ * associated (key,value) pair into the {@link ConditionHandler#conditionsMap}.
+ * @see ConditionHandler
+ * @see Timeline#conditions
  * @author Henri Augusto
  */
 public class CmdRemoveCondition implements Command{
@@ -42,7 +44,7 @@ public class CmdRemoveCondition implements Command{
     @Override
     public void execute() {
         removePanes();
-        List<Condition> conditions = TimelineFXApp.app.timeline.conditions;
+        List<Condition> conditions = ChronoMapApp.app.timeline.conditions;
         //if it is a top-level condition
         for (Iterator<Condition> it = conditions.iterator(); it.hasNext();) {
             Condition next = it.next();
@@ -86,20 +88,20 @@ public class CmdRemoveCondition implements Command{
         }
         if(wasTopLevel){
             try{
-                TimelineFXApp.app.timeline.conditions.add(indexOfTopLevel,copy); //copy otherwise subconditions would not be restored!
+                ChronoMapApp.app.timeline.conditions.add(indexOfTopLevel,copy); //copy otherwise subconditions would not be restored!
                 
             } catch (IndexOutOfBoundsException ex){
                 GUIMessages.displayMessage("Could not add the copy again on the same index!");
-                TimelineFXApp.app.timeline.conditions.add(copy);
+                ChronoMapApp.app.timeline.conditions.add(copy);
             }
             copy.register();
         }
         for (Condition condition : topLevelContainingConditionSet) {
-            TimelineFXApp.app.timeline.conditions.remove(condition);
+            ChronoMapApp.app.timeline.conditions.remove(condition);
             condition.unregister(); //idk what i'm doing
         }
         for (Condition condition : topLevelContainingConditionCopySet) {
-            TimelineFXApp.app.timeline.conditions.add(condition);
+            ChronoMapApp.app.timeline.conditions.add(condition);
             condition.register(); //idk what i'm doing
         }
         //ConditionsWindowStageManager.createWindow(); //can't do that because the accordions would be closed on reconstruction

@@ -1,4 +1,4 @@
-package timelinefx;
+package ChronoMap;
         
 import static java.lang.Math.cos;
 import static java.lang.Math.max;

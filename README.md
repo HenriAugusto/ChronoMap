@@ -1,10 +1,10 @@
-# TimelineFX ![](https://github.com/HenriAugusto/TimelineFX/blob/master/Icons/TimelineFX%20Icon.png)
+# ChronoMap ![](https://github.com/HenriAugusto/ChronoMap/blob/master/Icons/ChronoMap%20Icon.png)
 
-[**Click here to read this README file in English**](https://github.com/HenriAugusto/TimelineFX/blob/master/README-en.md)
+[**Click here to read this README file in English**](https://github.com/HenriAugusto/ChronoMap/blob/master/README-en.md)
 
 Este é o repositório principal para o aplicativo TimelinFX
 
-[**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/TimelineFX/releases/tag/v0.1.0)
+[**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/ChronoMap/releases/tag/v0.1.0)
 
 ## O que é isto?
 
@@ -12,15 +12,15 @@ TimelinFX é um aplicativo para criar, editar e visualizar linhas do tempo (time
 
 ## Por quê?
 
-Tudo começou como um projeto pessoal para me ajudar em meus estudos de história (principalmente história da arte). Então, como professor, percebi que era uma ferramenta muito útil nas aulas de música porque a maioria dos estudantes tinha uma compreensão básica da sequência dos eventos mas não tinha um bom entendimento de sua _"posição no tempo"_. Por exemplo: em aulas sobre história da música da música ocidental nós usamos muito tempo falando de Bach em diante. Os estudantes não observam que "Idade Média" é na verdade um período de ~1000 anos (Assim chamado pelas pessoas da Renascença). Então eu decidi criar este projeto para ajudar os estudantes a entender a escala temporal das coisas.
+Tudo começou como um projeto pessoal para me ajudar em meus estudos de história (principalmente história da arte). Então, como professor, percebi que era uma ferramenta muito útil nas aulas de música porque a maioria dos estudantes tinha uma compreensão básica da sequência dos eventos mas não tinha um bom entendimento de sua _"posição no tempo"_. Por exemplo: em aulas sobre história da música da música ocidental nós falamos muito de Bach e compositores posteriores. Ao somar todos estes temos provavelmente o mesmo tempo de aula que usamos para falar de Idade Média, por exemplo. Os estudantes entretanto não observam que "Idade Média" é na verdade um período de ~1000 anos (e foi assim chamado pelas pessoas da Renascença) e não conseguem portanto comparar este fato ao de que a maior parte dos compositores que estudamos atuou num período de menos de 300 anos. Então eu decidi criar este projeto para ajudar os estudantes a entender a escala temporal das coisas.
 
 É importante notar que **a linha do tempo não é um objeto de estudo _per se_** e sim uma **ferramenta** para auxiliar estudantes nos seus estudos de história. Ela os ajuda a entender melhor _"posições no tempo"_ e os permite agrupar eventos visualmente a fim de estudar sua _posição relativa_
 
 ## Screenshot
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20screenshot.png)
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20screenshot.png)
 
 ## Gif
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20gif.gif)
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
 
 ## Funcionalidades
 

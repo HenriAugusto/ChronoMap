@@ -3,27 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import static timelinefx.HelpStageManager.root;
+
 
 /**
- *
- * @author Henri
+ * This is just a useful stage to get a String input form the user.
+ * @author Henri Augusto
  */
 public class GetStringStage {
+    static boolean shouldThrowException = false; //can't be local because goes out of scope (memory)
     
-    static String getStringFromUser(String messageToDisplay){
+    static String getStringFromUser(String messageToDisplay) throws UserCanceledException{
         Stage stage = new Stage();
+        shouldThrowException = false;
         
         //create root
         VBox root = new VBox();
@@ -48,13 +48,19 @@ public class GetStringStage {
                     break;
                 case "ESCAPE":
                     stage.close();
+                    shouldThrowException = true;
                     break;
             }
         });
         
         stage.showAndWait();
+        if (shouldThrowException) {
+            throw new UserCanceledException();
+        }
         String out = tf.getText() == null ? "[empty]" : tf.getText(); 
         return out;
     }
+    
+    static class UserCanceledException extends Exception{}
     
 }

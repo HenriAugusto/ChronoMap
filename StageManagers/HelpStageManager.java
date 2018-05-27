@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
@@ -44,12 +44,13 @@ public class HelpStageManager{
         
     static void createWindow(){
         stage = new Stage();
+            stage.setTitle("Help");
         root = new VBox();
             root.setPadding( new Insets(30));
             root.setSpacing(20);
             //root.setAlignment(Pos.CENTER);
         currentRow = 1;
-        Text help = new Text("TimelineFX Help");
+        Text help = new Text("ChronoMap Help");
            help.setFont( new Font(20) );
         HBox btnsHBox = new HBox();
             //btnsHBox.setAlignment(Pos.CENTER);

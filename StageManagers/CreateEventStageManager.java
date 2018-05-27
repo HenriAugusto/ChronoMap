@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -113,7 +113,7 @@ public class CreateEventStageManager {
                        //Event event = TimelineFXApp.app.timeline.createEvent(name, start, end, (int) (Math.random() * 1500 - 750));
                        Event event = new Event(name, start, end, height);
                        event.setConditionExpr(cExpr);
-                       CommandHandler.executeCommand( new CmdNewEvent(TimelineFXApp.app.timeline, event) );
+                       CommandHandler.executeCommand( new CmdNewEvent(ChronoMapApp.app.timeline, event) );
                    inputStage.close();
                }
                if (e.getCode().toString().equals("ESCAPE")) {

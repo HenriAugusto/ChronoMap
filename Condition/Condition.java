@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -15,8 +15,8 @@ import javafx.beans.property.SimpleStringProperty;
  * Each Condition object holds a Condition name and a list of sub conditions
  * The condition's boolean value is responsibility of ConditionHandler.
  * 
- * It is set to "true" at initialization via the <code>register()</code> and it must be manually
- * unregistered via <code>unregister()</code> prior to deletion.
+ * It is set to "true" at initialization via the {@link Condition#register() and it must be manually
+ * unregistered via {@link Condition#unregister()} prior to deletion.
  * 
  * @author Henri Augusto
  */

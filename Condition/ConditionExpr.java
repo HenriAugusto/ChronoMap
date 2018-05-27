@@ -14,12 +14,27 @@ result:
 ConditionExpr c1;
 ConditionExp c2;
 */
-package timelinefx;
+package ChronoMap;
 
 import javafx.beans.property.SimpleStringProperty;
 import org.dom4j.Element;
 
 /**
+ * This class represents a boolean expression used to define a condition to which a {@link Event} should or shouldn't be shown.
+ * <br>It works by using the binary operators <b>&&</b> and <b>||</b> (respectively "and" and "or").
+ * 
+ * <p>Note that the <b>&&</b> operator is evaluated <b>before</b> the <b>||</b> operator. You can put the expression 
+ * <br>containing || into parenthesis if it is needed to be evaluated first. Some examples of valid syntax:</p>
+ * 
+ * <ul>
+ *      <li> Composers </li>
+ *      <li> Composers && Painters</li>
+ *      <li> Composers || Painters && Writers</li>
+ *      <li> (Composers || Painters) && Writers</li>
+ * </ul>
+ * 
+ * <p>As an example of operator precedence note that <br>
+ * <b>Composers || Painters && Writers</b> is equals to <b>Composers || (Painters && Writers)</b> </p>
  * 
  * @author Henri Augusto
  */
@@ -66,7 +81,14 @@ public class ConditionExpr {
         this.type = Type.SINGLE;
     }
 
-    //@Override
+    /**
+     * Evaluates recursively the Boolean expressions contained into this {@link ConditionExpr} object.
+     * <p>For that it checks the condition's Boolean value sotred into {@link ConditionHandler#conditionsMap}.</p>
+     * <p>For example:</p>
+     * <p>If CondA and CondB are true and CondC is false<br>
+     * <b>(CondA || CondB) && CondC</b> evaluates to false.</p>
+     * @return true or false
+     */
     public boolean eval() {
         switch(type){
             case AND:
@@ -88,6 +110,10 @@ public class ConditionExpr {
         }
     }
     
+    /**
+     * enum used to describe if that condition expression as a single condition (like "Composers") or <br>
+     * and "And" or "Or" Condition like "Composers && ComposersClassical" or "Painters || Writers".
+     */
     enum Type{
         SINGLE,
         AND,
@@ -126,12 +152,16 @@ public class ConditionExpr {
     }
 
     String getName() {
-        //return name.getValue() == null ? "VAI TOMAR NO CU" : name.getValue();
         return name.getValue();
     }
     
 
-    
+    /**
+     * Checks if this expression contains valid syntax AND contains only existent conditions <br>
+     * For example (Painters && Writers) contains valid syntax but the condition "Writers" might not be registered in the
+     * {@link Timeline} object and {@link ConditionHandler}.
+     * @throws timelinefx.ConditionExpr.NonExistentConditionException 
+     */
     void validate() throws NonExistentConditionException{
         //<dbg>Dbg.println("Validating!:"+toString(), Dbg.ANSI_YELLOW_BACKGROUND);
         //<dbg>String op = "Or: ";
@@ -170,6 +200,11 @@ public class ConditionExpr {
         }
     }
     
+    /**
+     * Takes a XML {@link Element} and adds (recursively) a child element corresponding to this ConditionExpr. <br>
+     
+     * @param e 
+     */
     void addXmlElementInto(Element e){
         String ename = e.getName();
         System.out.println("NAME = "+ename);
@@ -198,7 +233,7 @@ public class ConditionExpr {
     }
     
     /**
-     * Sexy recursive method to read the conditions tree form the xml
+     * Sexy recursive method to read the conditions tree form XML data
      * @param the <showCondition> element (and recursively it's children)
      * @return ConditionExpr based
      */
@@ -225,6 +260,11 @@ public class ConditionExpr {
         }
     }
     
+    /**
+     * Checks if a ConditionExpression contains the given condition
+     * @param c the condition to be checked
+     * @return true if it contains, false otherwise
+     */
     public boolean containsCondition(Condition c){
         switch(type){
             case SINGLE:
@@ -236,6 +276,10 @@ public class ConditionExpr {
         throw new RuntimeException("Wrong type on ConditionExpr");
     }
     
+    /**
+     * Exception used to indicate that a {@link ConditionExpression} contains <br>
+     * a reference to a non existent condition name, i.e: a condition not registered in {@link ConditionHandler} and not present in {@link Timeline#conditions}
+     */
     class NonExistentConditionException extends Exception{
 
         public NonExistentConditionException(String s) {

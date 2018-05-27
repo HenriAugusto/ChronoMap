@@ -3,26 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
-import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import timelinefx.Event;
-import timelinefx.Timeline;
+
 
 /**
  *
@@ -45,6 +41,17 @@ public class Export {
             Logger.getLogger(Timeline.class.getName()).log(Level.SEVERE, null, ex);
             return;
         }
+        /* This is not needed because the java filechooser is smart enough to do that for us
+        if( f.isFile() ){
+            try {
+                if ( !YesOrNoStage.getBooleanFromUser("File "+f.getName()+" already exists! Do you want to replace?") ){
+                    return;
+                }
+            } catch (YesOrNoStage.UserCanceledException ex) {
+                return;
+            }
+        }
+        */
         //FileWriter out; //FOUND THE BUG. FileWriter constructurs assume DEFAULT ENCODINGs are OKAY
         FileWriter notUsed;
         FileOutputStream out;
@@ -56,6 +63,7 @@ public class Export {
             Document doc = DocumentHelper.createDocument();
                 doc.setXMLEncoding("UTF-8");
             Element root = doc.addElement("timeline");
+            saveSettings(timeline, root);
             saveConditions(timeline, root);
             for (Event e : timeline.events) {
                 e.saveXML(root);
@@ -67,10 +75,11 @@ public class Export {
             OutputFormat format = OutputFormat.createPrettyPrint();
                 format.setEncoding("UTF-8"); //SOLVED org.dom4j.DocumentException: invalid byte ???????
                 format.setIndentSize(4);
-                GUIMessages.displayMessage("Writing UTF-8");
+                //GUIMessages.displayMessage("Writing UTF-8");
+                GUIMessages.displayMessage("Writing "+f.getName());
             XMLWriter writer = new XMLWriter(out, format);
-            GUIMessages.displayMessage("Actual encoding: "+format.getEncoding());
-            GUIMessages.displayMessage("doc.getXMLEncoding(): "+doc.getXMLEncoding());
+            //GUIMessages.displayMessage("Actual encoding: "+format.getEncoding());
+            //GUIMessages.displayMessage("doc.getXMLEncoding(): "+doc.getXMLEncoding());
             //GUIMessages.displayMessage("out.getEncoding(): "+out.getEncoding());
             writer.write(doc);
             out.close();
@@ -79,6 +88,14 @@ public class Export {
         }
         
         
+    }
+    
+    private static void saveSettings(Timeline timeline, Element root){
+        Element settings = root.addElement("settings");
+        settings.addElement("name").setText(timeline.name);
+        settings.addElement("minYear").setText(""+timeline.minYear);
+        settings.addElement("maxYear").setText(""+timeline.maxYear);
+        settings.addElement("height").setText(""+timeline.height);
     }
 
     private static void saveConditions(Timeline timeline, Element root) {

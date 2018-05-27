@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,13 +28,13 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
-import timelinefx.Event;
-import timelinefx.Timeline;
-import timelinefx.TimelineFXApp;
+import ChronoMap.Event;
+import ChronoMap.Timeline;
+import ChronoMap.ChronoMapApp;
 
 /**
  * This is a class that i've created for the solely purpose of importing data from a Timeline i had created on the GeoGebra.
- * It have no more use and will be removed in future releases
+ * It has no more use and will be removed in future releases
  * @author Henri Augusto
  */
 @Deprecated
@@ -50,6 +50,12 @@ public class GeoGebraImport {
         File f = fileChooser.showOpenDialog(stage);
         return f.getCanonicalPath();
     }
+    
+    /**
+     * Old method that i've used to read data from a timeline i've previously created in GeoGebra. 
+     * See java doc comment for {@link GeoGebraImport}
+     * @deprecated
+     */
     static void loadFromGeogebraXML(Timeline timeline) {
         timeline.clear();
         String path = "C:\\Users\\User\\Desktop\\Juce Time Line\\Juce TimeLine\\Source\\timeline.xml";
@@ -66,11 +72,11 @@ public class GeoGebraImport {
             Element root = doc.getRootElement();
 
             Element construction = root.element("construction");
-            TimelineFXApp.app.timeline.events = getEvents(construction);
+            ChronoMapApp.app.timeline.events = getEvents(construction);
 
         } catch (DocumentException ex) {
-            Logger.getLogger(timelinefx.Export.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("timelinefx.Import.loadFromGeogebraXML() TOMAR NO CU");
+            //Logger.getLogger(ChronoMap.ImportExport.Export.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("ChronoMap.Import.loadFromGeogebraXML()");
         }
     }
     

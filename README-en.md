@@ -1,27 +1,27 @@
-# TimelineFX ![](https://github.com/HenriAugusto/TimelineFX/blob/master/Icons/TimelineFX%20Icon.png)
+# ChronoMap ![](https://github.com/HenriAugusto/ChronoMap/blob/master/Icons/ChronoMap%20Icon.png)
 
-This the Main repository for the TimelineFX application.
+This the Main repository for the ChronoMap application.
 
-[**Click here to go to the download page!**](https://github.com/HenriAugusto/TimelineFX/releases/tag/v0.1.0)
+[**Click here to go to the download page!**](https://github.com/HenriAugusto/ChronoMap/releases/tag/v0.1.0)
 
-[**Clique aqui para ler em português**](https://github.com/HenriAugusto/TimelineFX/blob/master/README.md)
+[**Clique aqui para ler em português**](https://github.com/HenriAugusto/ChronoMap/blob/master/README.md)
 
 
 ## What is it?
 
-TimelineFX is an desktop software application to create, edit and view timelines.
+ChronoMap is an desktop software application to create, edit and view timelines.
 
 ## Why? 
 
-Everything started as a personal project to aid me in my history studies (mainly art history). Then, as a teacher, i realized it was a very useful tool in our music classes because most students had basic understanding of the sequence of events but had not a good understanding of their _"position in time"_. For example: in western music history classes for example we spend a lot of time talking  from Bach onwards and don't spend as much in the previous preiods. The students don't get that the "Middle Ages" is actually a ~1000 year period. (So called Middle Ages by the Renaissance). So i've decided to create this project in order to aid students to have a better understanding of the time scale of things.
+Everything started as a personal project to aid me in my history studies (mainly art history). Then, as a teacher, i realized it was a very useful tool in our music classes because most students had basic understanding of the sequence of events but had not a good understanding of their _"position in time"_. For example: in western music history classes for example we spend a lot of time talking about Bach and later composers. The students don't get that the "Middle Ages" is actually a ~1000 year period. (So called Middle Ages by the Renaissance) and consequently can't compare this to the fact that the biggest part of the composers we study are in a period of less than 300 years. So i've decided to create this project in order to aid students to have a better understanding of the time scale of things.
 
 It is important to notice that **the timeline is not a study object _per se_** but instead a **tool** for aiding students in their history studies. It helps then to understand _"positions in time"_ and allows then to group visually related events in order to study their _relative position_.
 
 ## Screenshot
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20screenshot.png)
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20screenshot.png)
 
 ## Gif
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/TimelineFX/blob/v0.1.0/Readme%20Images/TimelineFX%20v0.1.0%20gif.gif)
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
 
 ## Features
 
