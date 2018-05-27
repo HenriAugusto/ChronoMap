@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,7 +13,8 @@ import java.util.logging.Logger;
 import javafx.geometry.Point2D;
 
 /**
- *
+ * Command for moving events. <br>
+ * Note that {@link CommandHandler} usually merge consecutive CmdMoveEvents.
  * @author Henri Augusto
  */
 public class CmdMoveEvents implements Command {

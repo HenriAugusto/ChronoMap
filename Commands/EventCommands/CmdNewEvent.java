@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
+ * Command for creating a new event
  * @author Henri Augusto
  */
 public class CmdNewEvent implements Command {
@@ -23,7 +23,7 @@ public class CmdNewEvent implements Command {
 
     @Override
     public void execute() {
-        TimelineFXApp.app.timeline.events.add(newEvent);
+        ChronoMapApp.app.timeline.events.add(newEvent);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CmdNewEvent implements Command {
 
     @Override
     public void undo() {
-        TimelineFXApp.app.timeline.events.remove(newEvent);
+        ChronoMapApp.app.timeline.events.remove(newEvent);
     }
     
 }

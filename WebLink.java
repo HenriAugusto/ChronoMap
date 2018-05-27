@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.scene.paint.Color;
 
 /**
- *
+ * This class represents a WebLink that is meant to be contained into a {@link Event} that the app can 
+ * load into a {@link Browser} object.
+ * @see Event
+ * @see Browser
  * @author HenriAugusto
  */
 public class WebLink {

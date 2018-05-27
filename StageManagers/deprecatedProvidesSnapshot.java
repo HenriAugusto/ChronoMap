@@ -1,5 +1,5 @@
 
-package timelinefx.StageManagers;
+package ChronoMap;
 
 import javafx.scene.image.WritableImage;
 import javafx.stage.Stage;

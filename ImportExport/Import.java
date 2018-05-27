@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +25,12 @@ import org.dom4j.io.SAXReader;
  */
 public class Import {
     
+    /**
+     * Displays a fileChooser dialog to the user then
+     * reads the .xml data of that file and load it into
+     * the timeline passed as a parameter.
+     * @param timeline object where the data will be loaded
+     */
     static void loadFromFile(Timeline timeline){
         Stage stage = new Stage();
         stage.setWidth(1500);
@@ -38,7 +44,7 @@ public class Import {
         }
         //If the user have choosen a file let's proceed
         timeline.clear();
-        String path = "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\Windows\\Network Shortcuts\\c.xml";
+        String path;// = "";
         try {
             path = f.getCanonicalPath();
         } catch (IOException ex) {
@@ -47,14 +53,16 @@ public class Import {
         }
         System.out.println("LOADING FROM FILE: "+path);
             SAXReader reader = new SAXReader();
-                GUIMessages.displayMessage("Reading UTF-8");
+                GUIMessages.displayMessage("Reading "+f.getName());
                 reader.setEncoding("UTF-8"); //SOLVED org.dom4j.DocumentException: invalid byte ???????
             //reader.setEncoding("UTF-8"); //needed?
             try {
                 Document doc = reader.read(path);
                 Element root = doc.getRootElement();
 
-                Element construction = root.element("construction");
+                //Element construction = root.element("construction");
+                Element settings = root.element("settings");
+                    loadSettings(timeline, settings);
                 Element conditions = root.element("conditions");
                 if(conditions == null){
                     System.out.println("DIDN'T FIND CONDITION");
@@ -66,8 +74,13 @@ public class Import {
                 
                 loadConditions(timeline,conditions);
             } catch (DocumentException ex) {
-                Logger.getLogger(timelinefx.Export.class.getName()).log(Level.SEVERE, null, ex);
-                System.out.println("timelinefx.Import.loadFromGeogebraXML() DOCUMENT EXCEPTION!!!!!");
+                //Logger.getLogger(ChronoMap.ImportExport.Export.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("ChronoMap.Import.loadFromGeogebraXML() DOCUMENT EXCEPTION!!!!!");
+                GUIMessages.displayMessage("There was an error parsing "+f.getName());
+                ex.printStackTrace();
+            } catch (Exception ex){
+                GUIMessages.displayMessage("There was an unknown error trying to open "+f.getName());
+                ex.printStackTrace();
             }
             System.out.println("loading done!");
     }
@@ -78,6 +91,18 @@ public class Import {
             temp.add( new Event(e) );
         }
         timeline.events = temp;
+    }
+    
+    private static void loadSettings(Timeline timeline, Element settings){
+        timeline.name = settings.element("name").getText();
+        try {
+            timeline.minYear = Integer.parseInt(settings.element("minYear").getText());
+            timeline.maxYear = Integer.parseInt(settings.element("maxYear").getText());
+            timeline.height = Integer.parseInt(settings.element("height").getText());
+        } catch (NumberFormatException nfex) {
+            GUIMessages.displayMessage("There was an error reading the numbers from the settings.");
+        }
+        
     }
 
     private static void loadConditions(Timeline timeline, Element conditions) {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.ArrayList;
 import javafx.collections.FXCollections;
@@ -152,7 +152,7 @@ public class Event {
         }
         
         
-        if(TimelineFXApp.app.timeline.gview.getZoom() >= 0.5){
+        if(ChronoMapApp.app.timeline.gview.getZoom() >= 0.5){
             gc.setFill(color);
             Text t = new Text(name);
             double textWidth = t.getLayoutBounds().getWidth();
@@ -199,6 +199,10 @@ public class Event {
         return Geometry.distanceBetweenPoints(p, eventPoint) <= distance;
     }
 
+    /**
+     * Given an XML {@link Element} this method saves the data related to that event on this event object.
+     * @param root 
+     */
     void saveXML(Element root) {
         System.out.println("======================SAVING================\n"+this);
         Element event = root.addElement("event");
@@ -233,6 +237,10 @@ public class Event {
         showCondition.addXmlElementInto(showConditionElement);
     }
     
+    /**
+     * Given an XML {@link Element} this method loads the data related to that event on this event object.
+     * @param xml 
+     */
     private void loadFromXML(Element xml){
         name = xml.attribute("name").getText();
         try{
@@ -247,7 +255,7 @@ public class Event {
         ongoing = Boolean.parseBoolean(xml.element("date").attribute("ongoing").getText() );
         height = Integer.parseInt( xml.element("height").getText() );
         float r = Float.parseFloat(xml.element("color").attribute("red").getText() );
-        float g = Float.parseFloat(xml.element("color").attribute("green").getText() );
+        float g = Float.parseFloat(xml.element("color").attribute("green").getText() ); //i should put a try catch on those parsers
         float b = Float.parseFloat(xml.element("color").attribute("blue").getText() );
         color = new Color(r,g,b,1);
         Element show = xml.element("showCondition");
@@ -272,10 +280,10 @@ public class Event {
             String linkName = "googling for "+getName();
             String linkUrl = "http://google.com/search?q="+getName();
             WebLink.WebLinkType linkType = WebLink.WebLinkType.OTHER_OPEN_BROWSER;
-            TimelineFXApp.app.browser.goToLink( new WebLink(linkType, linkUrl, linkName));
+            ChronoMapApp.app.browser.goToLink( new WebLink(linkType, linkUrl, linkName));
             return;
         }
-        TimelineFXApp.app.browser.goToLink(   links.get(currentLink)   );
+        ChronoMapApp.app.browser.goToLink(   links.get(currentLink)   );
         incrementLink();
     }
 
@@ -311,7 +319,8 @@ public class Event {
     
     /**
      * Sexy recursive method to descend the condition tree in the XML
-     * Set <i>showConditionResult</i> to it's ConditionExpr evaluation
+     * <p>It then sets the boolean variable {@link Event#showConditionResult} to the value returned
+     * by the evaluation of it's {@link ConditionExpr}</p>
      */
     void checkCondition() {
         //System.out.println("=======Checking condition on event\n"+this);
@@ -321,14 +330,24 @@ public class Event {
         }
     }
     
-    void isOnView(){
-        if(TimelineFXApp.app.timeline.gview.isPointOnTransformedView(start, height) && TimelineFXApp.app.timeline.gview.isPointOnTransformedView(end, height) ){
+    /**
+     * Updates the {@link Event#isOnViewResult} on this Event
+     */
+    void updateIsOnView(){
+        if(ChronoMapApp.app.timeline.gview.isPointOnTransformedView(start, height) && ChronoMapApp.app.timeline.gview.isPointOnTransformedView(end, height) ){
             //System.out.println("===="+name+"====\ntimelinefx.Event.isOnView() = TRUE");
             isOnViewResult = true; 
         } else {
             //System.out.println("timelinefx.Event.isOnView() = FALSE");
             isOnViewResult = false;
         }
+    }
+    
+    /**
+     * Returns the Event's {@link Event#isOnViewResult}
+     */
+    boolean isOnView(){
+        return isOnViewResult;
     }
     
     void setSelected(boolean b) {
@@ -342,19 +361,23 @@ public class Event {
     void select() {
         if(selected || !showConditionResult ){return;}
         selected = true;
-        TimelineFXApp.app.timeline.selectedEvents.add(this);
+        ChronoMapApp.app.timeline.selectedEvents.add(this);
     }
 
     void unselect() {
         if(!selected){return;}
         selected = false;
-        TimelineFXApp.app.timeline.selectedEvents.remove(this);
+        ChronoMapApp.app.timeline.selectedEvents.remove(this);
     }
     
     boolean isSelected(){
        return selected; 
     }
     
+    /**
+     * Experimental method used by the experimental {@link ThreeDimensionalVisualizationStageManager}
+     * @return Shape3D for that event
+     */
     Shape3D get3DShape(){
         Shape3D out;
         if(end-start==0){
@@ -366,7 +389,6 @@ public class Event {
         }
         
         
-        
         out.setLayoutX(start); //also works
         out.setLayoutY(height); //also works
         //out.setTranslateX(start);
@@ -374,7 +396,7 @@ public class Event {
         int deltaZ = 200;
         int rWidth = 200;
         z = 0+Math.random()*rWidth-rWidth/2;
-        for (Condition condition : TimelineFXApp.app.timeline.conditions) {
+        for (Condition condition : ChronoMapApp.app.timeline.conditions) {
             if(showCondition.containsCondition(condition)){
                 break;
             }
@@ -387,8 +409,36 @@ public class Event {
         return out;
     }
 
+    /**
+     * Sets the color used to display this event.
+     * @param color 
+     */
     void setColor(Color color) {
         this.color = color;
+    }
+
+    /**
+     * Returns if this event is ongoing (like an war still happening or an alive person)
+     * @return 
+     */
+    boolean isOngoing() {
+        return ongoing;
+    }
+
+    /**
+     * Sets if this event is ongoing (like an war still happening or an alive person)
+     * @param isEventOngoing 
+     */
+    void setOngoing(boolean isEventOngoing) {
+        this.ongoing = isEventOngoing;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String newDescription) {
+        description = newDescription;
     }
 
     

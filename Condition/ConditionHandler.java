@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
- *
+ * This class contains helper methods to manage the conditions in a {@link  Timeline}.
+ * It stores the Boolean value of each condition in a map for easy access 
+ * (So we don't have to recursively iterate on the conditions for each {@link Event} when determining if it's going to be displayed or not)
+ * @see Timeline#conditions
  * @author Henri Augusto
  */
 public class ConditionHandler {

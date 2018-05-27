@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.geometry.Point2D;
 import javafx.geometry.Rectangle2D;
@@ -19,13 +19,14 @@ public class MouseHandler {
     static boolean selecting = false;
     static Point2D selectStart;
     
+    
     static void mousePressed(MouseEvent e){
         if( e.isPrimaryButtonDown() ){
             System.out.println("timelinefx.MouseHandler.mousePressed()");
             Point2D mouse = new Point2D(e.getX(), e.getY());
-            mouse = TimelineFXApp.app.timeline.gview.untransformPointOnView(mouse);
+            mouse = ChronoMapApp.app.timeline.gview.untransformPointOnView(mouse);
             //System.out.println("IS MOUSE ON VIEW? (should be true) ="+TimelineFXApp.app.timeline.gview.isPointOnTransformedView(mouse));
-            for (Event event : TimelineFXApp.app.timeline.events) {
+            for (Event event : ChronoMapApp.app.timeline.events) {
                 if(   event.checkPointNearEvent(mouse.getX(), mouse.getY())   ){
                     event.select();
                 } else {
@@ -35,19 +36,19 @@ public class MouseHandler {
             }
         } else if( e.isSecondaryButtonDown() ){
             selecting = true;
-            GraphicView gv = TimelineFXApp.app.timeline.gview;
+            GraphicView gv = ChronoMapApp.app.timeline.gview;
             Point2D mouse = new Point2D(e.getX(), e.getY() );
             selectStart = gv.untransformPointOnView( mouse );
         }
-        TimelineFXApp.app.draw();
+        ChronoMapApp.app.draw();
     }
     
     static void mouseDragged(MouseEvent e){
         
         if( e.isSecondaryButtonDown() && selecting ){
-                TimelineFXApp.app.draw();
-                GraphicsContext gc = TimelineFXApp.app.cnv.getGraphicsContext2D();
-                GraphicView gv = TimelineFXApp.app.timeline.gview;
+                ChronoMapApp.app.draw();
+                GraphicsContext gc = ChronoMapApp.app.cnv.getGraphicsContext2D();
+                GraphicView gv = ChronoMapApp.app.timeline.gview;
                 //what is faster? stroking a rect or filling a rect then clearing a smaller one?
                 Point2D mouse = new Point2D(e.getX(), e.getY() );
                 mouse = gv.untransformPointOnView(mouse);
@@ -75,8 +76,8 @@ public class MouseHandler {
     static void mouseReleased(MouseEvent e){
         if(selecting){
             selecting = false;
-            TimelineFXApp.app.draw();
-            GraphicView gv = TimelineFXApp.app.timeline.gview;
+            ChronoMapApp.app.draw();
+            GraphicView gv = ChronoMapApp.app.timeline.gview;
             Point2D mouse = new Point2D(e.getX(), e.getY());
             mouse = gv.untransformPointOnView(mouse);
             Point2D leftTop = new Point2D(
@@ -90,11 +91,11 @@ public class MouseHandler {
             double w = rightBottom.getX() - leftTop.getX();
             double h = rightBottom.getY() - leftTop.getY();
             Rectangle2D r = new Rectangle2D(leftTop.getX(), leftTop.getY(), w, h);
-            TimelineFXApp.app.timeline.clearSelectedEvents();
-            for (Event event : TimelineFXApp.app.timeline.events) {
+            ChronoMapApp.app.timeline.clearSelectedEvents();
+            for (Event event : ChronoMapApp.app.timeline.events) {
                 event.setSelected( r.contains(event.start/2+event.end/2, event.height)  );
             }
-            TimelineFXApp.app.draw();
+            ChronoMapApp.app.draw();
         }
     }
     

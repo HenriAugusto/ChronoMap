@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 
 import java.util.ArrayList;
@@ -17,13 +17,17 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -33,8 +37,9 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * This stage is used to edit selected events. If more than 1 event is selected it warns the user and stops accepting edits.
- * Challenge: how to detect when there were changes to selectedEvents in order to update the window??
+ * This stage is used to edit selected events. If more than 1 event is selected it warns the user and stops accepting edits. 
+ * <br> Challenge: how to detect when there were changes to selectedEvents in order to update the window?? 
+ * <br> Bug: if you change the text on the fields for the web links and then add a new web link you loose the changes
  * @author Henri Augusto
  */
 public class EditEventStageManager {
@@ -42,7 +47,7 @@ public class EditEventStageManager {
     static Scene scene = null;
     static ConditionExpr cExpr = null;
     static boolean isConditionValid = false;
-    static TextField nameField, startField, endField, heightField, conditionField;
+    static TextField nameField, startField, endField, descriptionTextField, heightField, conditionField;
     static Label conditionStatus = null;
     static ChangeListener conditionUpdateListener;
     static Event selected;
@@ -50,8 +55,10 @@ public class EditEventStageManager {
     private static boolean onlyOneEventIsSelected = false;
     private static ScrollPane webLinksScrollPane;
     private static VBox webLinksVBox;
+    private static CheckBox ongoingCheckbox;
     private static List<WebLinkHBox> webLinkHBoxes = new ArrayList<>();
     private static final ColorPicker colorPicker = new ColorPicker(Color.BLACK);
+    
        
     /**
      * Shows the Edit event window, initializing everything when necessary
@@ -81,8 +88,20 @@ public class EditEventStageManager {
             nameField = new TextField();
         Label startLabel = new Label("start date");
             startField = new TextField();
+            //try using
+            //https://stackoverflow.com/questions/31039449/java-8-u40-textformatter-javafx-to-restrict-user-input-only-for-decimal-number
+            
+            
         Label endLabel = new Label("end date");
             endField = new TextField();
+            
+        Accordion descriptionAcc = new Accordion();
+        descriptionTextField = new TextField();
+            descriptionAcc.getPanes().add( new TitledPane("Event description", descriptionTextField ));
+            
+        ongoingCheckbox = new CheckBox();
+            Label ongoingLabel = new Label("Is it an ongoing event or alive person?");
+            HBox ongoingHBox = new HBox(ongoingCheckbox, ongoingLabel);
         Label heightLabel = new Label("event height");
             heightField = new TextField();
         Label conditionLabel = new Label("Condition for exhibition");
@@ -97,9 +116,11 @@ public class EditEventStageManager {
                 nameLabel, nameField, 
                 startLabel, startField, 
                 endLabel, endField,
+                descriptionAcc,
+                ongoingHBox,
                 heightLabel, heightField
         );
-        
+            vbox.setPadding( new Insets(10) );
         HBox colorHBox = new HBox();
         colorHBox.setPadding( new Insets(10) ) ;
         Label colorLabel = new Label("Color:");
@@ -128,6 +149,9 @@ public class EditEventStageManager {
             setListeners();//THIS MUST GO AFTER updateFields
     }
     
+    /**
+     * Called inside {@link EditEventStageManager#createEventWindow() } it creates the GUI objects containing the {@link WebLinkHBox}
+     */
     static void createWebLinkNodes(){
         //initialize VBox to hold the WebLinkHBox objects
         webLinksVBox = new VBox();
@@ -154,6 +178,7 @@ public class EditEventStageManager {
         
         //The Scroll pane to display all this
         webLinksScrollPane = new ScrollPane(labelsButtonsAndWebLinkEditFields);
+        webLinksScrollPane.setStyle("-fx-background-color:transparent;"); //https://stackoverflow.com/questions/12899788/javafx-hide-scrollpane-gray-border  (hides the border)
         
         
     }
@@ -163,31 +188,14 @@ public class EditEventStageManager {
            @Override
            public void handle(KeyEvent e) {
                System.out.println("Receiving key on EditEventStageManager: "+e.getCode().toString());
-               if (e.getCode().toString().equals("ENTER") && isConditionValid && onlyOneEventIsSelected) {
+               if (e.getCode()==KeyCode.ENTER && isConditionValid && onlyOneEventIsSelected) {
                    //==========================================================================
                    //THIS IS THE FIX FOR THE COLORPICKER BUG         bug = first the stage is closed THEN the enter is going to the ColorPicker
-                   //I SHOULD TOTALLY REPORT THIS BUG                who i know it? because if you don't close the stage on enter 
+                   //I SHOULD TOTALLY REPORT THIS BUG                how i know it? because if you don't close the stage on enter 
                    e.consume();                              //      (so enter opens the color picker) and you close the stage clicking on the [X] it works normally
+                   //end bug fix
                    //this should be a command!
-                    System.out.println("WHAT DA FUCK");
-                    String name = nameField.getText();
-                    int start = Integer.parseInt(startField.getText());
-                    int end = Integer.parseInt(endField.getText());
-                    int height = Integer.parseInt(heightField.getText());
-                    List<CmdEditEvent.WebLinkEditInfo> linkEditInfos = new ArrayList<>();
-                    
-                    for (WebLinkHBox linkHBox : webLinkHBoxes) {
-                       linkEditInfos.add( 
-                               new CmdEditEvent.WebLinkEditInfo(linkHBox.link, linkHBox.getName(), linkHBox.getUrl(), linkHBox.getType()) 
-                       );
-                   }
-                    Color color = colorPicker.getValue();
-                    
-                    CmdEditEvent cmd = new CmdEditEvent(
-                            selected, name, start, end, height, color, cExpr, linkEditInfos
-                        );
-                    CommandHandler.executeCommand(cmd);
-                    inputStage.close();
+                    commitChanges();
                }
                if (e.getCode().toString().equals("ESCAPE")) {
                    inputStage.close();
@@ -229,7 +237,7 @@ public class EditEventStageManager {
     */
    private static void setListeners(){
        //This is the main listener that changes <i>Event selected;</i> when the user changes it's selectiong
-       TimelineFXApp.app.timeline.selectedEvents.addListener(new SetChangeListener<Event>() {
+       ChronoMapApp.app.timeline.selectedEvents.addListener(new SetChangeListener<Event>() {
            
            @Override
            public void onChanged(SetChangeListener.Change<? extends Event> change) {
@@ -256,31 +264,37 @@ public class EditEventStageManager {
     }
 
     /**
-     * Updates selected and all other fields
+     * Updates the information for the window when a new event is selected
      */
     private static void updateFields() {
-        if (TimelineFXApp.app.timeline.selectedEvents.size() == 1) {
-            selected = TimelineFXApp.app.timeline.selectedEvents.iterator().next();
+        if (ChronoMapApp.app.timeline.selectedEvents.size() == 1) {
+            selected = ChronoMapApp.app.timeline.selectedEvents.iterator().next();
             onlyOneEventIsSelected = true;
         } else{
             onlyOneEventIsSelected = false;
         }
         if( !onlyOneEventIsSelected ){
-            createEventLabel.setText( TimelineFXApp.app.timeline.selectedEvents.isEmpty() ? "No event selected" : "More than one event selected");
+            createEventLabel.setText( ChronoMapApp.app.timeline.selectedEvents.isEmpty() ? "No event selected" : "More than one event selected");
+            createEventLabel.setTextFill( Color.FIREBRICK);
             nameField.setText("");
             startField.setText("");
             endField.setText("");
             heightField.setText("");
+            descriptionTextField.setText("");
             conditionField.setText("");
+            ongoingCheckbox.setSelected(false);
             webLinksVBox.getChildren().clear();
         } else {
             createEventLabel.setText("Editing event ("+selected.getName()+")");
+            createEventLabel.setTextFill( Color.BLACK);
             nameField.setText(selected.getName());
             startField.setText(""+selected.getStart());
             endField.setText(""+selected.getEnd());
             heightField.setText(""+selected.getHeight());
+            descriptionTextField.setText(""+selected.getDescription());
             colorPicker.setValue(selected.getColor());
             conditionField.setText("" + selected.showCondition.toString());
+            ongoingCheckbox.setSelected(selected.isOngoing());
             addWebLinksHBoxes();
         }
         parseAgain();
@@ -340,6 +354,40 @@ public class EditEventStageManager {
         }
          */
         return image;
+    }
+    
+    /**
+     * This method is called in order to validate the user input and, if it's valid, run a {@link CmdEditEvent} object.
+     */
+    private static void commitChanges(){
+        String name, description;
+        int start, end, height;
+        try {
+            System.out.println("Enter Key was pressed on the Edit Event");
+            name = nameField.getText().equals("") ? "[empty name]" : nameField.getText();
+            start = Integer.parseInt(startField.getText());
+            end = Integer.parseInt(endField.getText());
+            height = Integer.parseInt(heightField.getText());
+            description = descriptionTextField.getText().equals("") ? "[empty description]" : descriptionTextField.getText();
+        } catch (NumberFormatException e) {
+            GUIMessages.displayMessage("Start, end or height is not an integer", 10000);
+            return;
+        }
+        boolean ongoing = ongoingCheckbox.selectedProperty().get();
+        List<CmdEditEvent.WebLinkEditInfo> linkEditInfos = new ArrayList<>();
+
+        for (WebLinkHBox linkHBox : webLinkHBoxes) {
+            linkEditInfos.add(
+                    new CmdEditEvent.WebLinkEditInfo(linkHBox.link, linkHBox.getName(), linkHBox.getUrl(), linkHBox.getType())
+            );
+        }
+        Color color = colorPicker.getValue();
+
+        CmdEditEvent cmd = new CmdEditEvent(
+                selected, name, start, end, height, description, color, cExpr, ongoing, linkEditInfos
+        );
+        CommandHandler.executeCommand(cmd);
+        inputStage.close();        
     }
     
     static final class WebLinkHBox extends HBox{

@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import javafx.application.Platform;
+import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -30,7 +31,7 @@ public class EventSearcher {
     static GridPane grid;
     static Scene scene;
     static VBox vbox;
-    static ScrollPane sp = new ScrollPane();
+    static ScrollPane sp;
     static TextField searchField;
     
     static void showSearchWindow(){
@@ -43,14 +44,18 @@ public class EventSearcher {
     
     static void createSearchWindow(){
         stage = new Stage();
+            stage.setTitle("Search Events");
         if ( grid == null ){
              grid = new GridPane();
-             sp.setContent(grid);
+             sp = new ScrollPane();
+                sp.setStyle("-fx-background-color:transparent;"); //https://stackoverflow.com/questions/12899788/javafx-hide-scrollpane-gray-border  (hides the border)
+                sp.setContent(grid);
              //sp.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
              //sp.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
              //sp.resize(400, 400);
         }
         
+            
         if( vbox==null){
              vbox = new VBox();
              Label eventSearchLabel = new Label("Search for events");
@@ -68,6 +73,7 @@ public class EventSearcher {
                 search(searchField.getText());
             });
         }
+        vbox.setPadding( new Insets(10) );
         if( scene == null ){
             scene = new Scene(vbox, 500, 500);
         }
@@ -85,7 +91,7 @@ public class EventSearcher {
         int i = 0;
         int nOfCols = 3;
         s = replaceCharsWithAccents(s);
-        for (Event e : TimelineFXApp.app.timeline.events) {
+        for (Event e : ChronoMapApp.app.timeline.events) {
             String eventNameTest = replaceCharsWithAccents(  e.name.toLowerCase()  );
             if(  eventNameTest.contains(s.toLowerCase()) ){
                 //System.out.println("timelinefx.EventSearcher.search() \n"+e);
@@ -93,7 +99,7 @@ public class EventSearcher {
                 int y = (int)((float)i/nOfCols);
                 Button btn = new Button(e.name);
                 btn.setOnAction((event) -> {
-                    GraphicView g = TimelineFXApp.app.timeline.gview;
+                    GraphicView g = ChronoMapApp.app.timeline.gview;
                     Point2D transformed = new Point2D(e.start/2+e.end/2, e.height);
                     g.centerOnPoint(transformed.getX(), transformed.getY());
                     g.centerOnPoint(e.start/2+e.end/2, e.height);
@@ -104,11 +110,11 @@ public class EventSearcher {
                         Event selectedEvent = TimelineFXApp.app.timeline.selectedEvents.get(j);
                         selectedEvent.unselect(); 
                     }*/
-                    TimelineFXApp.app.timeline.clearSelectedEvents(); //does the above
+                    ChronoMapApp.app.timeline.clearSelectedEvents(); //does the above
                     
                     e.select();
-                    TimelineFXApp.app.timeline.updateEventsIsOnView();
-                    TimelineFXApp.app.draw();
+                    ChronoMapApp.app.timeline.updateEventsIsOnView();
+                    ChronoMapApp.app.draw();
                 });
                 grid.add(btn, x, y);
                 ++i;

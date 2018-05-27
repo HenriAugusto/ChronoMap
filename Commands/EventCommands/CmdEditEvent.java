@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.List;
 import java.util.logging.Level;
@@ -18,7 +18,9 @@ public class CmdEditEvent implements Command{
     int newStart, oldStart;
     int newEnd, oldEnd;
     int newHeight, oldHeight;
+    boolean newOngoing, oldOngoing;
     String newName, oldName;
+    String newDescription, oldDescription;
     String newCondExpr, oldCondExpr;
     Color newColor, oldColor;
     Event event;
@@ -31,11 +33,17 @@ public class CmdEditEvent implements Command{
      * @param newStart
      * @param newEnd
      * @param newHeight
+     * @param newDescription
      * @param newColor 
      * @param newCondExpr 
      * @param linksEditInfos 
      */
-    public CmdEditEvent(Event event, String newName, int newStart, int newEnd, int newHeight, Color newColor, ConditionExpr newCondExpr, List<WebLinkEditInfo> linksEditInfos) {
+    public CmdEditEvent(Event event, String newName, 
+                        int newStart, int newEnd, int newHeight,
+                        String newDescription,
+                        Color newColor, ConditionExpr newCondExpr,
+                        boolean newOngoing,
+                        List<WebLinkEditInfo> linksEditInfos) {
         this.event = event;
         
         this.newName = newName;
@@ -46,6 +54,10 @@ public class CmdEditEvent implements Command{
             oldEnd = event.end;
         this.newHeight = newHeight;
             oldHeight = event.height;
+        this.newDescription = newDescription;
+            oldDescription = event.getDescription();
+        this.newOngoing = newOngoing;
+            oldOngoing = event.isOngoing();
         this.newCondExpr = newCondExpr.toString();
             oldCondExpr =  event.showCondition.toString() ;
             
@@ -60,7 +72,9 @@ public class CmdEditEvent implements Command{
         event.setStart(newStart);
         event.setEnd(newEnd);
         event.setHeight(newHeight);
+        event.setDescription(newDescription);
         event.setColor(newColor);
+        event.setOngoing(newOngoing);
         setEventConditionExpr(newCondExpr);
         for (WebLinkEditInfo linkEditInfo : linksEditInfos) {
             linkEditInfo.execute();
@@ -78,7 +92,9 @@ public class CmdEditEvent implements Command{
         event.setStart(oldStart);
         event.setEnd(oldEnd);
         event.setHeight(oldHeight);
+        event.setDescription(oldDescription);
         event.setColor(oldColor);
+        event.setOngoing(oldOngoing);
         setEventConditionExpr(oldCondExpr);
         for (WebLinkEditInfo linkEditInfo : linksEditInfos) {
             linkEditInfo.undo();

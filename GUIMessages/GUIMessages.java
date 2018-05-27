@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import com.sun.javafx.tk.FontLoader;
 import com.sun.javafx.tk.Toolkit;
@@ -36,15 +36,15 @@ import javafx.util.Duration;
 public class GUIMessages {
     static List<Label> msgList = new ArrayList<>();
     static List<String> log = new ArrayList<>();
-    static double defaultDuration = 5000;
+    static double defaultDuration = 10000;
     static private Stage logStage;
     
     static void displayMessage(String msg, double duration) {
-        displayMessage(TimelineFXApp.app.root, msg, duration);
+        displayMessage(ChronoMapApp.app.root, msg, duration);
     }
     
     static void displayMessage(String msg) {
-        displayMessage(TimelineFXApp.app.root, msg, defaultDuration);
+        displayMessage(ChronoMapApp.app.root, msg, defaultDuration);
     }
     
     static void displayMessage(Group root, String msg){

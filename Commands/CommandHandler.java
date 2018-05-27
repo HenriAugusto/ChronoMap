@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 /**
- *
+ * This is the class that is responsible for the execution of {@link Command} implementations and <br>
+ * storing the commands in order to undo and redo then as the user demands.
  * @author Henri Augusto
  */
 public class CommandHandler {

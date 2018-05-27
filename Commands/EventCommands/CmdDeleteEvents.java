@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
+ * This command deletes an Event
  * @author Henri Augusto
  */
 public class CmdDeleteEvents implements Command {
@@ -27,9 +27,9 @@ public class CmdDeleteEvents implements Command {
     public void execute() {
         //Set<Event> l = new HashSet(TimelineFXApp.app.timeline.selectedEvents);
         for (Event event : events) {
-            TimelineFXApp.app.timeline.events.remove(event);
+            ChronoMapApp.app.timeline.events.remove(event);
         }
-        TimelineFXApp.app.timeline.selectedEvents.clear();
+        ChronoMapApp.app.timeline.selectedEvents.clear();
     }
 
     @Override
@@ -40,8 +40,8 @@ public class CmdDeleteEvents implements Command {
     @Override
     public void undo() {
         for (Event event : events) {
-            TimelineFXApp.app.timeline.events.add(event);
-            TimelineFXApp.app.timeline.selectedEvents.add(event);
+            ChronoMapApp.app.timeline.events.add(event);
+            ChronoMapApp.app.timeline.selectedEvents.add(event);
         }
         
     }

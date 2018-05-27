@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import com.sun.javafx.tk.Toolkit;
 import java.util.Map;
@@ -51,7 +51,7 @@ public class ConditionsWindowStageManager{
         stage = new Stage() ; //why i did it like this?
         stage.setMinHeight(400);
         stage.setMinWidth(400);
-        stage.setTitle("Condition");
+        stage.setTitle("Conditions");
         
         //Create basic Layout
         vbox = new VBox();
@@ -73,8 +73,8 @@ public class ConditionsWindowStageManager{
                     //buttonsHBox.getChildren().addAll( testBtn );
                     testBtn.setOnAction((event) -> {
                         Dbg.println("======Testing conditions=======", Dbg.ANSI_CYAN);
-                        Dbg.println("TimelineFXApp.app.timeline.conditions.size() = " + TimelineFXApp.app.timeline.conditions.size(), Dbg.ANSI_CYAN);
-                        for (Condition condition : TimelineFXApp.app.timeline.conditions) {
+                        Dbg.println("ChronoMapFXApp.app.timeline.conditions.size() = " + ChronoMapApp.app.timeline.conditions.size(), Dbg.ANSI_CYAN);
+                        for (Condition condition : ChronoMapApp.app.timeline.conditions) {
                             Dbg.println("Condition = " + condition, Dbg.ANSI_CYAN);
                         }
                         for (Map.Entry<String, Boolean> en : ConditionHandler.conditionsMap.entrySet()) {
@@ -106,8 +106,8 @@ public class ConditionsWindowStageManager{
     static void addHandlerOnCheckBox(CheckBox cb, String name){
         cb.selectedProperty().addListener((observable, oldValue, newValue) -> {
             ConditionHandler.conditionsMap.put(name, newValue);
-            TimelineFXApp.app.timeline.checkConditions();
-            TimelineFXApp.app.draw();
+            ChronoMapApp.app.timeline.checkConditions();
+            ChronoMapApp.app.draw();
         });
     }
 
@@ -136,7 +136,7 @@ public class ConditionsWindowStageManager{
             createWindow(); //here because of Import.loadConditions
         }
         mainAccordion.getPanes().clear();
-        for (Condition c : TimelineFXApp.app.timeline.conditions) {
+        for (Condition c : ChronoMapApp.app.timeline.conditions) {
             //TitledPane tp = getConditionTitledPane(c);
             TitledPane tp = new ConditionTitledPane(c,null);
                 //tp = new TitledPane(c.getName(), new Label("HAUHAEUHUEHAUEHAUHEUAHEUAHEAUHEAUHEAUHEAUHEAUHUAHE---AUEHAUEHAUEHAUHEAUHEUHAEUAHEUAHEUAHEUHAEUHUAEH") );
@@ -147,11 +147,11 @@ public class ConditionsWindowStageManager{
     static void setEventHandlersOnMainStage(){
         selectAllBtn.setOnAction((event) -> {
             updateAllCheckBoxesOnConditionsAccordion(mainAccordion, true);
-            TimelineFXApp.app.draw();
+            ChronoMapApp.app.draw();
         });
         unselectAllBtn.setOnAction((event) -> {
             updateAllCheckBoxesOnConditionsAccordion(mainAccordion, false);
-            TimelineFXApp.app.draw();
+            ChronoMapApp.app.draw();
         });
         addTopLevelConditionBtn.setOnAction((event) -> {
             CommandHandler.executeCommand( new CmdAddCondition(null,null) );
@@ -169,14 +169,14 @@ public class ConditionsWindowStageManager{
         Dbg.println("LET'S WRITE THE SNAPSHOT FOR THE CONDITIONS WINDOW", Dbg.ANSI_PURPLE);
         Condition c = null;
         boolean faking = false;
-        if (TimelineFXApp.app.timeline.conditions.isEmpty()) {
+        if (ChronoMapApp.app.timeline.conditions.isEmpty()) {
             faking = true;
             c = new Condition("Composers");
             c.subs.add(new Condition("ComposersClassical"));
             c.subs.add(new Condition("ComposersRomantic"));
             c.subs.add(new Condition("ComposersLateRomantic"));
             c.subs.add(new Condition("Composers20thCentury"));
-            TimelineFXApp.app.timeline.conditions.add(c);
+            ChronoMapApp.app.timeline.conditions.add(c);
             //CommandHandler.executeCommand(  new CmdAddCondition(c)  );
         }
         boolean hadToOpenTheStageBecauseOfEvilBug = false;
@@ -238,7 +238,7 @@ public class ConditionsWindowStageManager{
         }
         if(faking){
                 c.unregister();
-                TimelineFXApp.app.timeline.conditions.remove(c);
+                ChronoMapApp.app.timeline.conditions.remove(c);
                 updateTitledPanes();
             }
         //after the second snapshot, return

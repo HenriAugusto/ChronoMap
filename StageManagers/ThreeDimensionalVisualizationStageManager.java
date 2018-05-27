@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.LookupOp;
@@ -99,7 +99,7 @@ public class ThreeDimensionalVisualizationStageManager {
         font = Font.font("Arial", FontPosture.REGULAR, 100);
         
         int oi  = 0;
-        for (Event e : TimelineFXApp.app.timeline.events) {
+        for (Event e : ChronoMapApp.app.timeline.events) {
             subSceneRoot.getChildren().add( e.get3DShape() );
             
             //Create the text and take a snapshot!
@@ -150,10 +150,10 @@ public class ThreeDimensionalVisualizationStageManager {
         scene.setOnMouseDragged((event) -> {
             //camera.setRotate(event.getX());
             double translateX = (event.getSceneX() - 0) / stage.getWidth();
-            int size = TimelineFXApp.app.timeline.maxYear-TimelineFXApp.app.timeline.minYear;
-            translateX = translateX * size + (+TimelineFXApp.app.timeline.minYear);
+            int size = ChronoMapApp.app.timeline.maxYear-ChronoMapApp.app.timeline.minYear;
+            translateX = translateX * size + (+ChronoMapApp.app.timeline.minYear);
             double translateY = (event.getSceneY() - 0) / stage.getHeight();
-            translateY = translateY * TimelineFXApp.app.timeline.height - TimelineFXApp.app.timeline.height/2;
+            translateY = translateY * ChronoMapApp.app.timeline.height - ChronoMapApp.app.timeline.height/2;
             double tz;
             if(!camera.getTransforms().isEmpty()){
                 tz = camera.getTransforms().get(0).getTz();
@@ -180,7 +180,7 @@ public class ThreeDimensionalVisualizationStageManager {
                     camera.setTranslateZ(camera.getTranslateZ() + amt);
                     break;
                 case "R":
-                    for (Iterator<Event> iterator = TimelineFXApp.app.timeline.events.iterator(); iterator.hasNext();) {
+                    for (Iterator<Event> iterator = ChronoMapApp.app.timeline.events.iterator(); iterator.hasNext();) {
                         Event e = iterator.next();
                         double tz = camera.getTranslateZ();
                         camera.getTransforms().clear();
@@ -239,9 +239,9 @@ public class ThreeDimensionalVisualizationStageManager {
             return;
         }
         int delta = 100;
-        for (int i = TimelineFXApp.app.timeline.minYear; i < TimelineFXApp.app.timeline.maxYear; i += delta) {
+        for (int i = ChronoMapApp.app.timeline.minYear; i < ChronoMapApp.app.timeline.maxYear; i += delta) {
             if(true){break;}
-            Box plane = new Box(1, TimelineFXApp.app.timeline.height, 1000);
+            Box plane = new Box(1, ChronoMapApp.app.timeline.height, 1000);
             plane.setTranslateX(i);
             PhongMaterial mat = new PhongMaterial(Color.DARKORCHID.deriveColor(0, 1, 1, 0.3));
             mat.setSpecularPower(128);
@@ -252,8 +252,8 @@ public class ThreeDimensionalVisualizationStageManager {
         double size = 2;
         int deltaY = 100;
         int deltaZ = 100;
-        for (int x = TimelineFXApp.app.timeline.minYear; x < TimelineFXApp.app.timeline.maxYear; x += delta) {
-            for (int y = -TimelineFXApp.app.timeline.height/2; y < TimelineFXApp.app.timeline.height/2; y += deltaY) {
+        for (int x = ChronoMapApp.app.timeline.minYear; x < ChronoMapApp.app.timeline.maxYear; x += delta) {
+            for (int y = -ChronoMapApp.app.timeline.height/2; y < ChronoMapApp.app.timeline.height/2; y += deltaY) {
                 //Box b = new Box(size, size, 1000);
                     Cylinder b = new Cylinder(size, 1000);                    
                 b.setMaterial( new PhongMaterial(Color.CHARTREUSE) );
@@ -266,7 +266,7 @@ public class ThreeDimensionalVisualizationStageManager {
                 subSceneRoot.getChildren().add(b);
                 if(x==0 && false){
                     for (int z = 0; z < 1000; z+=deltaZ) {
-                        Box b2 = new Box(TimelineFXApp.app.timeline.maxYear-TimelineFXApp.app.timeline.minYear, size, size);
+                        Box b2 = new Box(ChronoMapApp.app.timeline.maxYear-ChronoMapApp.app.timeline.minYear, size, size);
                         b2.setMaterial(mat);
                         b2.setTranslateY(y);
                         b2.setTranslateZ(z);
@@ -275,7 +275,7 @@ public class ThreeDimensionalVisualizationStageManager {
                 }
                 if (y == 0) {
                     for (int z = 0; z < 1000; z += deltaZ) {
-                        Box b2 = new Box(size , TimelineFXApp.app.timeline.height, size);
+                        Box b2 = new Box(size , ChronoMapApp.app.timeline.height, size);
                         b2.setMaterial(mat);
                         b2.setTranslateX(x);
                         b2.setTranslateZ(z);

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 /**
- *
+ * Interface that defines Commands. Commands are general functionality of the code like <br>
+ * adding {@link Event} ojects, editing event data, adding a {link @Condition} and etc.
  * @author Henri Augusto
  */
 public interface Command {

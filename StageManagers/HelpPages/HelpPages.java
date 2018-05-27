@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -44,7 +45,7 @@ public class HelpPages {
      * 
      * The 4 methods are: <code>firstPage(), getPage(), nextPage() and previousPage() </code>
      */
-    static final int NUMBER_OF_PAGES = HelpPages.class.getDeclaredMethods().length-4; //there are only 4 methods that doesn't relate to getting a page
+    static final int NUMBER_OF_PAGES = HelpPages.class.getDeclaredMethods().length-4; //there are only 4 methods that doesn't returns a specifig page
     
     public static Parent firstPage(){
         currentPageNumber = 0;
@@ -84,6 +85,8 @@ public class HelpPages {
             parent = saveLoadTimelinePage();
         } else if ( i==compare++ ) {
             parent = linksAndBrowserPage();
+        } else if ( i==compare++ ) {
+            parent = otherTimelineSoftwarePage();
         } else{
             return getPage(NUMBER_OF_PAGES-1);
         }
@@ -117,6 +120,7 @@ public class HelpPages {
         helpGridPane.addLine("Ctrl + H", "Toggle fullscreen");
         helpGridPane.addLine("Ctrl + Z", "Undo");
         helpGridPane.addLine("Ctrl + Y", "Redo");
+        helpGridPane.addLine("F8", "Timeline settings");
         helpGridPane.addLine("Ctrl+F1", "show message log");
         helpGridPane.addLine("F10/F11", "Zoom in/out");
         helpGridPane.addLine("Ctrl+F10", "Reset zoom");
@@ -334,13 +338,19 @@ public class HelpPages {
         Text description2 = new Text("The save file will store the following information:\n"
                 + "- All information of every event\n"
                 + "- All information related to the timeline's conditions\n"
-                /*+ "- Timeline's current settings"*/);
+                + "- Timeline's current settings");
         description.setFont( new Font(14) );
         description2.setFont( new Font(14) );
         parent.getChildren().addAll(pageTitle, description, description2);
         String example = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
                 + "\n"
                 + "<timeline>\n"
+                + "    <settings>\n"
+                + "        <name>Timeline containing just beethoven</name>\n"
+                + "        <minYear>-500</minYear>\n"
+                + "        <maxYear>2018</maxYear>\n"
+                + "        <height>1000</height>\n"
+                + "    </settings>"
                 + "    <conditions>\n"
                 + "        <condition name=\"Composers\" value=\"true\">\n"
                 + "            <condition name=\"ComposersClassical\" value=\"true\"/>\n"
@@ -364,6 +374,43 @@ public class HelpPages {
                 + "        </showCondition>\n"
                 + "    </event>\n"
                 + "</timeline>";
+        //parent.getChildren().add( new Label(example) );
+        return parent;
+    }
+    
+    private static Parent otherTimelineSoftwarePage() {
+        class SoftwareInfo extends HBox{
+            SoftwareInfo(String name, String link){
+                TextField linkField = new TextField(link);
+                getChildren().addAll(
+                        new Label(name),
+                        linkField
+                );
+                setSpacing(10);
+                setHgrow(linkField, Priority.SOMETIMES);
+                setAlignment(Pos.CENTER);
+            }
+        }
+        VBox parent = new VBox();
+        parent.setSpacing(10);
+        Label pageTitle = new Label("Other timeline software");
+        pageTitle.setFont(new Font(20));
+        Text description = new Text("Below there is a link to other awesome timeline softwares that uses\n different approaches.\n");
+        description.setFont(new Font(14));
+        
+        parent.getChildren().addAll(pageTitle, description);
+        parent.getChildren().addAll(
+                new SoftwareInfo("TimeReach","http://www.timereach.com/"),
+                new SoftwareInfo("TimeCurves","http://www.aviz.fr/~bbach/timecurves/"),
+                new SoftwareInfo("TimeRef","https://www.timeref.com/"),
+                new SoftwareInfo("TimelineIndex","http://www.timelineindex.com/"),
+                new SoftwareInfo("TimelineJS","https://timeline.knightlab.com/"),
+                new SoftwareInfo("TimeGlider","timeglider.com/"),
+                new SoftwareInfo("TimMapper","timemapper.okfnlabs.org/"),
+                new SoftwareInfo("TimeExplorer","http://gameswithpurpose.org/time-explorer/"),
+                new SoftwareInfo("Histography","https://histography.io")
+                //https://ehistory.osu.edu/timeline-events
+        );
         return parent;
     }
     

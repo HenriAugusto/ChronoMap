@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package timelinefx;
+package ChronoMap;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,7 +20,8 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 /**
- *
+ * This class encapsulate a {@link WebView} object a long with the necessary JavaFX Components
+ * to display a web browser in the application.
  * @author Henri Augusto
  */
 public class Browser {
@@ -37,7 +38,7 @@ public class Browser {
         Browser(String url, ObservableList<Node> whereToAdd){
             addressBar = new TextField(url);
             webView = new WebView();
-            webView.setPrefHeight(TimelineFXApp.app.scene.getHeight()-50);
+            webView.setPrefHeight(ChronoMapApp.app.scene.getHeight()-50);
             webView.setPrefWidth(1250);
             //webView.setPrefSize(2900, 1650);
             //webView.getEngine().load("https://www.youtube.com/watch?v=49oiE8Tj1UU");
