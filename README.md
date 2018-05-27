@@ -2,6 +2,7 @@
 
 [**Click here to read this README file in English**](https://github.com/HenriAugusto/ChronoMap/blob/master/README-en.md)
 
+Este é o repositório principal para o aplicativo ChronoMap
 
 [**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/ChronoMap/releases)
 
