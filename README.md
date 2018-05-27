@@ -2,13 +2,12 @@
 
 [**Click here to read this README file in English**](https://github.com/HenriAugusto/ChronoMap/blob/master/README-en.md)
 
-Este é o repositório principal para o aplicativo TimelinFX
 
-[**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/ChronoMap/releases/tag/v0.1.0)
+[**Clique aqui para ir à pagina de download!**](https://github.com/HenriAugusto/ChronoMap/releases)
 
 ## O que é isto?
 
-TimelinFX é um aplicativo para criar, editar e visualizar linhas do tempo (timelines).
+ChronoMap é um aplicativo para criar, editar e visualizar linhas do tempo (timelines).
 
 ## Por quê?
 
