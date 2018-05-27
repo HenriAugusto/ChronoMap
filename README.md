@@ -17,10 +17,10 @@ Tudo começou como um projeto pessoal para me ajudar em meus estudos de históri
 É importante notar que **a linha do tempo não é um objeto de estudo _per se_** e sim uma **ferramenta** para auxiliar estudantes nos seus estudos de história. Ela os ajuda a entender melhor _"posições no tempo"_ e os permite agrupar eventos visualmente a fim de estudar sua _posição relativa_
 
 ## Screenshot
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20screenshot.png)
+![Looks like your browser can't display this image](https://raw.githubusercontent.com/HenriAugusto/ChronoMap/master/Readme%20Images/ChronoMap%20v0.1.0.png)
 
 ## Gif
-![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
+![Looks like your browser can't display this image](https://raw.githubusercontent.com/HenriAugusto/ChronoMap/master/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
 
 ## Funcionalidades
 
