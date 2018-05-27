@@ -368,7 +368,7 @@ public class EditEventStageManager {
             start = Integer.parseInt(startField.getText());
             end = Integer.parseInt(endField.getText());
             height = Integer.parseInt(heightField.getText());
-            description = descriptionTextField.getText().equals("") ? "[empty description]" : descriptionTextField.getText();
+            description = descriptionTextField.getText();
         } catch (NumberFormatException e) {
             GUIMessages.displayMessage("Start, end or height is not an integer", 10000);
             return;

@@ -358,12 +358,19 @@ public class Event {
         }
     }
 
+    /**
+     * This method makes the Event selected and adds it to {@link ChronoMapApp#app#timeline#selectedEvents}.
+     */
     void select() {
         if(selected || !showConditionResult ){return;}
         selected = true;
         ChronoMapApp.app.timeline.selectedEvents.add(this);
     }
 
+    /**
+     * This method makes the Event unselected and removes it from
+     * {@link ChronoMapApp#app#timeline#selectedEvents}.
+     */
     void unselect() {
         if(!selected){return;}
         selected = false;

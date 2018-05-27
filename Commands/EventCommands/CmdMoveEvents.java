@@ -32,6 +32,7 @@ public class CmdMoveEvents implements Command {
         for (Iterator<Event> it = events.iterator(); it.hasNext();) {
             Event next = it.next();
             next.setHeight(next.getHeight() + yMove);
+            next.updateIsOnView();
         }
     }
 
@@ -45,6 +46,7 @@ public class CmdMoveEvents implements Command {
         for (Iterator<Event> it = events.iterator(); it.hasNext();) {
             Event next = it.next();
             next.setHeight(next.getHeight() - yMove);
+            next.updateIsOnView();
         }
     }
     

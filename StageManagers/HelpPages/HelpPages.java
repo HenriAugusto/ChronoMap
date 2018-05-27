@@ -124,6 +124,8 @@ public class HelpPages {
         helpGridPane.addLine("Ctrl+F1", "show message log");
         helpGridPane.addLine("F10/F11", "Zoom in/out");
         helpGridPane.addLine("Ctrl+F10", "Reset zoom");
+        helpGridPane.addLine("mouse left btn (drag)", "move around");
+        helpGridPane.addLine("mouse right btn (drag)", "select events");
         
         Label label = new Label("Hotkeys overview");
             label.setFont( new Font(20) );

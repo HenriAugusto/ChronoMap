@@ -20,7 +20,6 @@ import javafx.scene.transform.Affine;
 public class GraphicView {
     //private Point2D leftTop = new Point2D(0, 0);
     //private Point2D center = new Point2D(666, 666);
-    private Point2D lastCenteredPoint = new Point2D(0, 0);
     private int translationX = 0;
     private int translationY = 0;
     private int viewX = 0;
@@ -31,6 +30,7 @@ public class GraphicView {
     ChangeListenerHandle scrollBarHchangeListenerHandle, scrollBarVchangeListenerHandle;
     Canvas cnv;
     GraphicsContext gc;
+    private Point2D lastCenteredPoint = new Point2D(0, 0);
     private Point2D minCenter,maxCenter;
     
     GraphicView(Canvas cnv, double minX, double minY, double maxX, double maxY){
@@ -100,7 +100,7 @@ public class GraphicView {
     }
     
     /**
-     * centers view on an <b>UNTRANSFORMED</b> point
+     * centers view on an <b>UNTRANSFORMED</b> point <br>
      * @param gc GraphicsContext to be transformed
      * @param x x coordinate of the point
      * @param y y coordinate of the point
@@ -136,6 +136,8 @@ public class GraphicView {
                 -p.getX()*zoom + 0.5*cnv.getWidth()/zoom,
                 -p.getY()*zoom + 0.5*cnv.getHeight()/zoom
         );*/
+        ChronoMapApp.app.timeline.updateEventsIsOnView();
+        ChronoMapApp.app.draw();
     }
     
     Point2D transformPoint(Point2D p){
@@ -222,8 +224,6 @@ public class GraphicView {
         double y = MathUtils.map(scrollBarV.getValue(), 0, scrollBarV.getMax(), minCenter.getY(), maxCenter.getY());
         double x = MathUtils.map(d, 0,scrollBarH.getMax(), minCenter.getX(), maxCenter.getX());
         centerOnPoint(x, y);
-        ChronoMapApp.app.timeline.updateEventsIsOnView();
-        ChronoMapApp.app.draw();
     }
     
     /**
@@ -234,8 +234,6 @@ public class GraphicView {
         double x = MathUtils.map(scrollBarH.getValue(), 0, scrollBarH.getMax(), minCenter.getX(), maxCenter.getX());
         double y = MathUtils.map(d, 0, scrollBarV.getMax(), minCenter.getY(), maxCenter.getY());
         centerOnPoint(x, y);
-        ChronoMapApp.app.timeline.updateEventsIsOnView();
-        ChronoMapApp.app.draw();
     }
     
     protected void setScrollBars(ScrollBar scrollBarH, ScrollBar scrollBarV){
@@ -258,6 +256,14 @@ public class GraphicView {
 
     public double getZoom() {
         return zoom;
+    }
+    
+    /**
+     * Returns a <b>copy</b> of the lastCenteredPoint
+     * @return 
+     */
+    public Point2D getLastCenteredPoint(){
+        return lastCenteredPoint.add(0, 0);
     }
 
     /**

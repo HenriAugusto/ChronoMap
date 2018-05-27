@@ -23,6 +23,7 @@ public class CommandHandler {
             undoableCmdHistory.add(c);
         c.execute();
         mergeCommands();
+        ChronoMapApp.app.draw(); //update drawing
     }
 
     static void undoLastCommand() {
@@ -33,6 +34,7 @@ public class CommandHandler {
         c.undo();
         redoCmdHistory.add(c);
         GUIMessages.displayMessage("Undoing last command");
+        ChronoMapApp.app.draw(); //update drawing
     }
 
     static void redoLastCommand() {
@@ -43,6 +45,7 @@ public class CommandHandler {
         c.execute();
         undoableCmdHistory.add(c);
         GUIMessages.displayMessage("Redoing last command");
+        ChronoMapApp.app.draw(); //update drawing
     }
     
     private static void mergeCommands(){

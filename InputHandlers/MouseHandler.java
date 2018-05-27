@@ -18,17 +18,27 @@ import javafx.scene.paint.Color;
 public class MouseHandler {
     static boolean selecting = false;
     static Point2D selectStart;
+    //Mouse dragging the screen
+    static Point2D dragStartPoint;
+    static Point2D dragStartCenter;
+    static boolean draggingScreen = false;
     
     
     static void mousePressed(MouseEvent e){
         if( e.isPrimaryButtonDown() ){
             System.out.println("timelinefx.MouseHandler.mousePressed()");
+            
+            draggingScreen = true;
+            dragStartPoint = new Point2D(e.getX(), e.getY() );
+            dragStartCenter = ChronoMapApp.app.timeline.gview.getLastCenteredPoint();
+            
             Point2D mouse = new Point2D(e.getX(), e.getY());
             mouse = ChronoMapApp.app.timeline.gview.untransformPointOnView(mouse);
             //System.out.println("IS MOUSE ON VIEW? (should be true) ="+TimelineFXApp.app.timeline.gview.isPointOnTransformedView(mouse));
             for (Event event : ChronoMapApp.app.timeline.events) {
                 if(   event.checkPointNearEvent(mouse.getX(), mouse.getY())   ){
                     event.select();
+                    draggingScreen = false; //we are clicking an event
                 } else {
                     event.unselect();
                 }
@@ -44,6 +54,13 @@ public class MouseHandler {
     }
     
     static void mouseDragged(MouseEvent e){
+        if(draggingScreen){
+            double zoom = ChronoMapApp.app.timeline.gview.getZoom();
+            Point2D currentMousePos = new Point2D( e.getX(), e.getY() );
+            Point2D delta = currentMousePos.subtract(dragStartPoint);
+            Point2D newCenter = dragStartCenter.subtract(delta.multiply(1/zoom));
+            ChronoMapApp.app.timeline.gview.centerOnPoint( newCenter );
+        }
         
         if( e.isSecondaryButtonDown() && selecting ){
                 ChronoMapApp.app.draw();
@@ -71,6 +88,7 @@ public class MouseHandler {
                 gc.strokeRect(leftTop.getX(), leftTop.getY(), w, h);
                 //gc.fillRect(50, 50, 150, 150);
         } 
+        ChronoMapApp.app.draw();
     }
     
     static void mouseReleased(MouseEvent e){
