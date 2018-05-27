@@ -1,10 +1,15 @@
+# ChronoMap ![](https://github.com/HenriAugusto/ChronoMap/blob/master/Icons/ChronoMap%20Icon.png)
 
+This the Main repository for the ChronoMap application.
 
+[**Click here to go to the download page!**](https://github.com/HenriAugusto/ChronoMap/releases/tag/v0.1.0)
 
+[**Clique aqui para ler em português**](https://github.com/HenriAugusto/ChronoMap/blob/master/README.md)
 
 
 ## What is it?
 
+ChronoMap is an desktop software application to create, edit and view timelines.
 
 ## Why? 
 
@@ -13,8 +18,10 @@ Everything started as a personal project to aid me in my history studies (mainly
 It is important to notice that **the timeline is not a study object _per se_** but instead a **tool** for aiding students in their history studies. It helps then to understand _"positions in time"_ and allows then to group visually related events in order to study their _relative position_.
 
 ## Screenshot
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20screenshot.png)
 
 ## Gif
+![Looks like your browser can't display this image](https://github.com/HenriAugusto/ChronoMap/blob/v0.1.0/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
 
 ## Features
 
