@@ -1,6 +1,6 @@
 # ChronoMap ![](https://github.com/HenriAugusto/ChronoMap/blob/master/Icons/ChronoMap%20Icon.png)
 
-[**Click here to read this README file in English**](https://github.com/HenriAugusto/ChronoMap/blob/master/README-en.md)
+🇺🇸 [**Click here to read this README file in English**](https://github.com/HenriAugusto/ChronoMap/blob/master/README-en.md) 🇺🇸 
 
 Este é o repositório principal para o aplicativo ChronoMap
 
