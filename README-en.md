@@ -4,7 +4,7 @@ This the Main repository for the ChronoMap application.
 
 [**Click here to go to the download page!**](https://github.com/HenriAugusto/ChronoMap/releases)
 
-[**Clique aqui para ler em português**](https://github.com/HenriAugusto/ChronoMap/blob/master/README.md)
+🇧🇷 [**Clique aqui para ler em português**](https://github.com/HenriAugusto/ChronoMap/blob/master/README.md) 🇧🇷
 
 
 ## What is it?
