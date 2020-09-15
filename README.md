@@ -12,12 +12,12 @@ ChronoMap é um aplicativo para criar, editar e visualizar linhas do tempo (time
 
 ## Por quê?
 
-Tudo começou como um projeto pessoal para me ajudar em meus estudos de história (principalmente história da arte). Então, como professor, percebi que era uma ferramenta muito útil nas aulas de música porque a maioria dos estudantes tinha uma compreensão básica da sequência dos eventos mas não tinha um bom entendimento de sua _"posição no tempo"_. Por exemplo: em aulas sobre história da música da música ocidental nós falamos muito de Bach e compositores posteriores. Ao somar todos estes temos provavelmente o mesmo tempo de aula que usamos para falar de Idade Média, por exemplo. Os estudantes entretanto não observam que "Idade Média" é na verdade um período de ~1000 anos (e foi assim chamado pelas pessoas da Renascença) e não conseguem portanto comparar este fato ao de que a maior parte dos compositores que estudamos atuou num período de menos de 300 anos. Então eu decidi criar este projeto para ajudar os estudantes a entender a escala temporal das coisas.
+Tudo começou como um projeto pessoal para me ajudar em meus estudos de história (principalmente história da arte). Então, como professor, percebi que era uma ferramenta muito útil nas minhas aulas de música porque a maioria dos estudantes tinha uma compreensão básica da sequência dos eventos mas não tinha um bom entendimento de sua _"posição no tempo"_.
+
+Por exemplo: em aulas sobre história da música da música ocidental nós falamos muito de Bach e compositores posteriores. À estes compositores dedica-se geralmente muito tempo de aula, usualmente mais aulas do que usamos para falar de Idade Média. Isso pode ofuscar o fato que a "Idade Média" é na verdade um período de aproximadamente 1000 anos (e este nome lhe foi dada pelas pessoas da Renascença) e não conseguem portanto comparar este fato ao de que a maior parte dos compositores que estudamos atuou num período de menos de 300 anos. Então eu decidi criar este projeto para ajudar os estudantes a entender a escala temporal das coisas.
 
 É importante notar que **a linha do tempo não é um objeto de estudo _per se_** e sim uma **ferramenta** para auxiliar estudantes nos seus estudos de história. Ela os ajuda a entender melhor _"posições no tempo"_ e os permite agrupar eventos visualmente a fim de estudar sua _posição relativa_
 
-## Screenshot
-![Looks like your browser can't display this image](https://raw.githubusercontent.com/HenriAugusto/ChronoMap/master/Readme%20Images/ChronoMap%20v0.1.0.png)
 
 ## Gif
 ![Looks like your browser can't display this image](https://raw.githubusercontent.com/HenriAugusto/ChronoMap/master/Readme%20Images/ChronoMap%20v0.1.0%20gif.gif)
@@ -31,6 +31,6 @@ Tudo começou como um projeto pessoal para me ajudar em meus estudos de históri
 * **Dados salvos com XML:** Toda a informação salva é armazenada em arquivos XML codificados em UTF-8 que podem ser lidas por outros aplicativos para estatísticas (e ainda é legível por humanos)
 * **Timeline da história da arte:** O software ja vem com a linha do tempo da história da arte que originou o software. Não está nem perto de estar finalizada (se é que um dia estará) mas é um bom começo ;)
 
-## Futuro
+## Funções planejadas
 
-- [ ] **Visualização 3D:** Visualizar em 3D a linha do tempo. __Easter egg!__ Na verdade você ja pode ver um protótipo dessa função apertando ctrl+3 depois de carregar tua linha do tempo. Clique e arraste para mover a visualização. UseF10 and F11 para zoom (use ctrl para controlar a variação de zoom)
+- [ ] **Visualização 3D:** Visualizar em 3D a linha do tempo. Você ja pode ver um protótipo dessa função apertando ctrl+3 depois de carregar tua linha do tempo. Clique e arraste para mover a visualização. Use F10 and F11 e Ctrl para controlar o zoom.
